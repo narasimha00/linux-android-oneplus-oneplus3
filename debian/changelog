@@ -1,0 +1,2274 @@
+linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0) halium-9.0; urgency=medium
+
+  [ Bardia Moshiri ]
+  * yylloc multiple definition
+  * disable CONFIG_COMPAT_VDSO
+  * initial debian packaging
+
+  [ Ernes_t ]
+  * Merge pull request #1 from Bettehem/Halium_9.0_GSI
+  * Merge pull request #2 from Bettehem/Halium_9.0_GSI
+
+  [ Bettehem ]
+  * Added waydroid support.
+  * Added android gadget config option so rndis works properly.
+  * Added patch for UT camera.
+
+  [ Ernest ]
+  * Update apparmor.
+  * Revert previous commits to allow CONFIG_VT activation on Kernel 3.18.
+  * Convert KEY_HOME into KEY_LEFTMETA and opposite, to enable the home button to call Lorimi dash
+  * Fix power button.
+  * Fix touchscreen
+  * Enable Halium-9.0
+
+  [ Monika Singh ]
+  * ARM: dts: Mount system as root for msm8909
+  * ARM: dts: msm: Mount system as root for msm8917
+  * ARM: dts: msm: Mount system as root for msm8996
+  * ARM: dts: msm: Mount system as root for msm8937
+  * ARM: dts: msm: Mount system as root for msm8953
+  * ARM: dts: msm: Mount system as root for OP3
+
+  [ dianlujitao ]
+  * qcacld-2.0: Import from LA.UM.7.5.r1-05300-8x96.0
+  * qcacld-2.0: Remove unused files, add make entry for QCA WLAN
+  * Add 'fs/sdfat/' from commit '5671af07ab2187ce4071837e2311c945fdcdc03b'
+  * Revert "scripts: gcc-wrapper: Route the GCC errors to stderr"
+  * ARM: dts: msm: Import 15801 and 15811 devicetree
+  * Revert "power: qpnp-smbcharger: Fix notifying FG while handling TCC interrupt"
+  * power: Import OnePlus changes
+  * ASoC: Import OnePlus changes
+  * input: Import fpc driver from OnePlus
+  * input: Import triple state key driver from OnePlus
+  * input: touchscreen: Import Synaptics driver from OnePlus
+  * Revert "msm: isp: Add support for VFE resolution limit"
+  * Revert "msm: camera: isp: Handle standby mode for B+M"
+  * msm: camera: sensor: Fix video node creation
+  * msm: camera: Import OnePlus changes
+  * misc: Import Type-C charger driver from OnePlus
+  * nfc: Import pn544 driver from OnePlus
+  * scsi: ufs: Import OnePlus changes
+  * usb: Import OnePlus changes
+  * msm: wlan: Import OnePlus changes
+  * msm: mdss: Import OnePlus changes
+  * PCI: Import OnePlus changes
+  * soc: qcom: Import OnePlus changes
+  * power: reset: Import OnePlus changes
+  * PM: Import OnePlus changes
+  * op3: Add initial defconfig
+  * op3: Enable OnePlus device drivers
+  * ARM: dts: 15801: Correct MPP4 behaviour
+  * op3: Disable modules
+  * op3: Build in qcacld-2.0 driver
+  * ARM: dts: 15801: Enable DMA for i2c8
+  * op3: Disable IPC Router MHI transport
+  * ARM: dts: 15801: Configure ramoops buffer
+  * op3: Enable pstore
+  * op3: Enable cpusets
+  * op3: Enable F2FS
+  * ARM: dts: 15801: Add synchronized RGB blink params
+  * input: synaptics_s3320: Create custom procfs nodes for gestures
+  * input: synaptics_s3320: Remove unused workqueue
+  * msm: qpnp-haptic: set up sysfs interface for common cmhw implementation
+  * op3: Enable BFQ
+  * mdss: livedisplay: Remove deprecated CMD_CLK_CTRL flag
+  * mdss: livedisplay: Don't send sRGB/DCI-P3 off cmd when dsi on
+  * ARM: dts: 15801: Regen panel dtsi using gcdb parser
+  * ARM: dts: 15801: Add livedisplay features
+  * fpc1020: Re-add the dummy store function for irq node
+  * power: oneplus_fastcg: Silence log spam
+  * ARM: dts: 15801: Decommonize BCL mitigation freq
+  * op3: Disable CoreSight Tracing Support
+  * op3: Enable jump label
+  * op3: Preserve memory on restart
+  * op3: Disable MSM_11AD
+  * op3: Disable MDSS xlog debug
+  * msm: mdss: Silence invalid data for dither log spam
+  * fs/proc: Override reboot boot mode with normal
+  * oneplus_fastcg: Silence log spam
+  * ARM: dts: msm: Set default GPU freq to 133MHz on msm8996 and msm8996pro
+  * misc: Fix uninitilized variables
+  * qcacld-2.0: Disable debug and diag
+  * PM: Break out once fingerprint wake thread found
+  * gpiolib: Fix OnePlus mismerge
+  * ANDROID: dm: Always mount as linear target
+
+  [ Simon Shi ]
+  * ARM: dts: op3: Set /vendor block device
+  * msm8996: enable module && ikconfig
+  * oneplus3: Enable dm-verity configs
+
+  [ Ethan Chen ]
+  * power: reset: Allow device to preserve memory on restart
+  * Revert "Android.bp: Initial header export bp for Android (qseecom only)"
+  * ALSA: asound.h: include time.h in userspace
+
+  [ Wen Yi ]
+  * drivers/pinctrl: skip non-reable gpio pins
+
+  [ Dan Pasanen ]
+  * power: don't ever reboot to verity red
+
+  [ Jens Axboe ]
+  * cfq-iosched: fix the setting of IOPS mode on SSDs
+
+  [ Tahsin Erdogan ]
+  * block: Make CFQ default to IOPS mode on SSDs
+
+  [ Daniel Micay ]
+  * add toggle for disabling newly added USB devices
+
+  [ Mark Salyzyn ]
+  * Bluetooth: hidp: buffer overflow in hidp_process_report
+  * FROMLIST: [PATCH v5 01/12] arm: vdso: rename vdso_datapage variables
+  * FROMLIST: [PATCH v5 02/12] arm: vdso: add include file defining __get_datapage()
+  * FROMLIST: [PATCH v5 03/12] arm: vdso: inline assembler operations to compiler.h
+  * FROMLIST: [PATCH v5 04/12] arm: vdso: do calculations outside reader loops
+  * FROMLIST: BACKPORT: [PATCH v6 05/12] arm: vdso: Add support for CLOCK_MONOTONIC_RAW
+  * FROMLIST: [PATCH v5 06/12] arm: vdso: add support for clock_getres
+  * FROMLIST: [PATCH v5 07/12] arm: vdso: disable profiling
+  * FROMLIST: [PATCH v5 08/12] arm: vdso: Add ARCH_CLOCK_FIXED_MASK
+  * FROMLIST: [PATCH v5 09/12] arm: vdso: move vgettimeofday.c to lib/vdso/
+  * FROMLIST: BACKPORT: [PATCH v5 10/12] arm64: vdso: replace gettimeofday.S with global vgettimeofday.C
+  * FROMLIST: BACKPORT: [PATCH v5 11/12] lib: vdso: Add support for CLOCK_BOOTTIME
+  * FROMLIST: [PATCH v5 12/12] lib: vdso: do not expose gettimeofday, if no arch supported timer
+  * FROMLIST: lib: vdso: add support for time
+  * ANDROID: CROSS_COMPILE_ARM32 must work if CONFIG_COMPAT_VDSO
+  * ANDROID: op3: turn on VDSO32
+  * ANDROID: clock_gettime(CLOCK_BOOTTIME,) slows down >20x
+
+  [ Kevin Brodsky ]
+  * FROMLIST: BACKPORT: [PATCH v2 1/3] arm64: compat: Split the sigreturn trampolines and kuser helpers (C sources)
+  * FROMLIST: BACKPORT: [PATCH v2 2/3] arm64: compat: Split the sigreturn trampolines and kuser helpers (assembler sources)
+  * FROMLIST: BACKPORT: [PATCH v2 3/3] arm64: compat: Add CONFIG_KUSER_HELPERS
+  * FROMLIST: BACKPORT: [PATCH] arm64: compat: Expose offset to registers in sigframes
+  * FROMLIST: [PATCH 1/6] arm64: compat: Use vDSO sigreturn trampolines if available
+  * FROMLIST: BACKPORT: [PATCH 2/6] arm64: elf: Set AT_SYSINFO_EHDR in compat processes
+  * FROMLIST: BACKPORT: [PATCH 3/6] arm64: Refactor vDSO init/setup
+  * FROMLIST: [PATCH 4/6] arm64: compat: Add a 32-bit vDSO
+  * FROMLIST: BACKPORT: [PATCH 5/6] arm64: compat: 32-bit vDSO setup
+  * FROMLIST: BACKPORT: [PATCH 6/6] arm64: Wire up and expose the new compat vDSO
+
+  [ Jisheng Zhang ]
+  * BACKPORT: arm64: apply __ro_after_init to some objects
+
+  [ Thierry Strudel ]
+  * removing msm calls to trace_printk
+  * op3: update mmap_rnd_bits to max value
+  * op3: disable CONFIG_MSM_RDBG
+  * irqchip: msm: log wakeup interrupts
+
+  [ Wei Wang ]
+  * perf: Fix HW/SW event grouping failure
+  * l2tp: use sk_dst_check() to avoid race on sk->sk_dst_cache
+  * op3: Disable unused kernel sensor drivers
+  * op3: Disable unused EHCI-HCD kernel driver
+  * arm64: configs: op3: clean up unused kernel features
+  * arm64: configs: op3: remove unused kernel funtions
+  * arm64: configs: op3: add FUSE FS back
+  * arm64: configs: op3: add CONFIG_PCI_QUIRKS back
+  * ANDROID: mm: add config for default readahead size
+  * op3: set default readahead to 2048KB
+  * do not call trace_printk on non-debug build
+  * ANDROID: ARM64: smp: disable preempt in backtracing across all cores
+  * pinctrl: qcom: unconditionally mark handled in msm_gpio_irq_handler
+  * kernel: initialize and free cpufreq stats properly
+  * ANDROID: fix uninitilized variable
+  * ANDROID: clean up uninitilized variable
+  * media: vidc: change default return vaule to 0
+  * ANDROID: disable CONFIG_CC_OPTIMIZE_FOR_SIZE
+  * irq: Add wakeup reason logging
+  * power: wakeup_reason: make log function work in interrupt context
+
+  [ Matt Wagantall ]
+  * arm: cpuinfo: drop L1 cache type print from pr_info to pr_debug
+
+  [ Kelly Rossmoyer ]
+  * fs: Improve eventpoll logging to stop indicting timerfd
+
+  [ Richard Chang ]
+  * Add kernel logging for when timerfd_read blocks
+
+  [ John Dias ]
+  * rcu: boost: avoid preemption before calling complete()
+  * arm64/configs: op3: enable RCU_BOOST
+  * sched: avoid scheduling RT threads on cores currently handling softirqs
+  * sched: avoid migrating when softint on tgt cpu should be short
+  * power: qpnp-fg: have sanity check beat once before wakelock
+  * power: qpnp-fg: make read_beat a static function
+  * fs: add useful debug info to eventpoll string
+
+  [ Tim Murray ]
+  * firmware_class: make firmware caching configurable
+  * op3: enable additional RCU debugging
+  * cpuidle: don't disable cpuidle when entering suspend
+  * ion: adjust system heap pool orders
+  * mm: fix pageblock heuristic
+  * lowmemorykiller: account for unevictable pages
+
+  [ Dhoat Harpal ]
+  * soc: qcom: glink: Modify ipc logging for error case
+  * soc: qcom: ipc_router_mhi_xprt: Initialize variable at start
+
+  [ Rama Krishna Phani A ]
+  * msm: mhi: initialize variables to default values
+
+  [ Vignesh Kulothungan ]
+  * msm: asm: validate ADSP data before access
+  * msm: adm: validate ADSP payload size before access
+  * ASoC: msm: qdspv2: initialize variables before use
+
+  [ Greg Hackmann ]
+  * Revert "scripts: gcc-wrapper: Use wrapper to check compiler warnings"
+  * FROMLIST: pstore-ram: add Device Tree bindings
+  * arm64: mm: move dma_overlap() out of init section
+
+  [ Rohit Vaswani ]
+  * drivers: iommu, leds, input, clk, devfreq: fix warnings
+
+  [ Karthikeyan Mani ]
+  * dsp: afe: check for payload size before payload access
+  * ASoC: wcd9335: Initialize variables before use
+
+  [ Sultan Alsawaf ]
+  * msm: msm_bus: Don't enable QoS clocks when none are present
+  * qcom-cpufreq: Use CLKFLAG_NO_RATE_CACHE
+  * clk: msm: clock-cpu-8996: Use CLKFLAG_NO_RATE_CACHE for perfcl_hf_mux
+  * kernel: Fix massive cpufreq stats memory leaks
+
+  [ Connor O'Brien ]
+  * ANDROID: proc: Add /proc/uid directory
+  * ANDROID: cpufreq: Add time_in_state to /proc/uid directories
+  * proc: add null check in proc_uid_init
+  * cpufreq: stats: update uid data in acct_update_power
+  * cpufreq: stats: use seq iterator for large uid-related files
+
+  [ Marissa Wall ]
+  * ANDROID: cpufreq: concurrent_active_time by pid
+  * ANDROID: cpufreq: concurrent_policy_time by pid
+  * ANDROID: cpufreq: uid_concurrent_active_time
+  * ANDROID: cpufreq: uid_concurrent_policy_time
+  * ANDROID: cpufreq: Remove seq_printf from critical path
+  * STOPSHIP: ANDROID: cpufreq: concurrent_*_time P/H experiment
+  * ANDROID: cpufreq: change uid_cpupower to use u32
+
+  [ Andres Oportus ]
+  * ANDROID: cpufreq_stat: add per task/uid/freq stats
+  * ANDROID: cpufreq_stats: Fix task time in state locking
+  * ANDROID: cpufreq: stats: add uid removal for uid_time_in_state
+  * ANDROID: cpufreq: stats: Fix dead stats clearing timing
+
+  [ Siqi Lin ]
+  * ANDROID: fs/pstore/ramoops: Use vmalloc() for old buffer
+  * ANDROID: pstore: Use vmalloc for large allocations due to ramoops size
+  * op3: Disable CONFIG_SYSRQ_SCHED_DEBUG
+  * op3: Disable CONFIG_IKCONFIG_PROC
+  * clk: msm: clock-gcc-8996: Add 50 us delay after BLSP1 AHB clock enable
+  * ANDROID: cpufreq: stats: Fix sleeping while atomic in cpufreq_task_stats_init
+
+  [ Guenter Roeck ]
+  * CHROMIUM: cpufreq: Declare acct_update_power as static inline if needed
+
+  [ Bruno Martins ]
+  * op3: Enable support for sdFAT filesystem
+  * op3: Enable optimized cryptographic algorithms
+
+  [ Ard Biesheuvel ]
+  * crypto: arm64/crc32 - bring in line with generic CRC32
+  * arm64/crypto: issue aese/aesmc instructions in pairs
+  * arm64/crypto: use crypto instructions to generate AES key schedule
+
+  [ Riley Andrews ]
+  * arm64: crypto: Change priority of arm64 aes cipher.
+
+  [ Yazen Ghannam ]
+  * crypto: crc32 - Add ARM64 CRC32 hw accelerated module
+
+  [ dukwung.kim ]
+  * power: qpnp-smbcharger: init power supply type as USB
+
+  [ ocean_chen ]
+  * scsi: ufs: extend the time out value of discard
+
+  [ Fenglin Wu ]
+  * leds: leds-qpnp: replace pwm_free with pwm_disable
+
+  [ Tim Schumacher ]
+  * op3: Enable support for RTL8152/RTL8153 Ethernet devices
+
+  [ Pratap Nirujogi ]
+  * msm: camera: cpp: Check for valid tx level
+  * ion: ensure valid start address
+
+  [ Subash Abhinov Kasiviswanathan ]
+  * net: core: Remove warning for cloned packets in ingress path
+
+  [ gaurav jindal ]
+  * drivers: cpufreq_interactive: handle error for module load fail
+
+  [ Ramakrishna Gottimukkula ]
+  * cpufreq: interactive: fix to come out of hysteresis mode
+
+  [ Rohit Gupta ]
+  * cpufreq_interactive: Allow hispeed_freq to work with prediction
+
+  [ Jin Qian ]
+  * uid_sys_stats: fix overflow when io usage delta is negative
+
+  [ Roopesh Rajashekharaiah Nataraja ]
+  * serial: msm_serial_hs: optimize total tty port support
+
+  [ Philip Cuadra ]
+  * tty: move tty_port workqueue to be a kthread
+  * tty: add tty_port_set_policy function
+  * tty:  check before stopping kthread
+  * Make msm_serial_hs RT to improve bluetooth performance
+  * msm_serial_hs:  make the Bluetooth tty thread RT
+
+  [ Naseer Ahmed ]
+  * mdss: rotator: Use FIFO kthread for rotator work
+
+  [ Peter Zijlstra ]
+  * sched/core: Fix an SMP ordering race in try_to_wake_up() vs. schedule()
+  * UPSTREAM: sched/preempt: Fix preempt_count manipulations
+
+  [ Alexey Polyudov ]
+  * gpio: Mask non-wakeup GPIO interrupts on suspend
+
+  [ Joel Fernandes ]
+  * rcu: Print to trace on RCU stalls
+  * ANDROID: sched: rt: Avoid preempting CPUs if softirq explicity disable
+
+  [ Srinath Sridharan ]
+  * sched/rt: Avoid moving rt task if destination CPU does not run low priority task.
+
+  [ Yabin Cui ]
+  * perf: disable cross_hotplug for l2 cache pmu.
+  * perf:arm64: fix pmu percpu irq handling at hotplug.
+  * perf:arm64: fix lockdep warning when handling CPU_STARTING.
+
+  [ Veena Sambasivan ]
+  * Revert "Perf: arm64: stop counters when going into hotplug"
+  * Revert "Perf: arm64: restore registers after reset"
+  * Revert "Perf: arm64: fix disable of pmu irq during hotplug"
+  * Revert "Perf: arm64: support hotplug and power collapse"
+  * perf: arm64: implement CPU_PM notifier
+  * perf: arm64: fix RCU usage on pmu resume from low-power
+
+  [ Nick Desaulniers ]
+  * arm64/configs: op3: enable ext4 encryption and savedefconfig
+  * Silences WLAN, PCIe, and CPU suspend state kernel messages
+
+  [ Diogo Ferreira ]
+  * ARM: dts: 15801: Disable core hotplugging, up the mitigation freq
+  * qpnp-smbcharger: Publish charger voltage to the usb psy
+
+  [ Sultanxda ]
+  * input: synaptics: s3320: Fix unsafe memory accesses in procfs nodes
+  * input: synaptics: s3320: Fix type##_read_func function
+  * input: synaptics: s1302: Clean up PM routines and move them into worker
+  * input: synaptics: s3320: Silence log spam
+  * input: synaptics: fw_update: Fix various memory leaks
+  * input: synaptics: s3320: Don't run baseline inside IRQ handler
+  * msm: qpnp-haptic: Process haptics asynchronously
+  * msm: qpnp-haptic: Use a high-priority workqueue for haptics
+  * mdss: livedisplay: Fix memory leaks in mdss_livedisplay_update()
+  * power: bq27541: Silence log spam
+  * power: bq27541: Don't queue work onto a specific CPU
+  * power: bq27541: Fix memory leak in driver probe
+  * misc: fpc1020: Clean up PM routines and move them into dedicated worker
+  * misc: fpc1020: Set fingerprint hal priority to max when screen is off
+  * misc: fpc1020: Clean up interrupt handler
+  * misc: fpc1020: Simplify proximity shut-off
+  * misc: fpc1020: Wait for uevent to send before exiting IRQ handler
+  * misc: fpc1020: Rewrite and optimize
+  * misc: fpc1020: Use device struct as wakeup source
+  * input: tri-state-key: Properly filter out spurious interrupts
+  * input: tri-state-key: Rewrite and optimize
+  * input: tri-state-key: Clean up some code styling
+  * input: tri-state-key: Use ffz() instead of find_first_zero_bit()
+  * input: tri-state-key: Fix trivial code style issue in IRQ handler
+  * soc: qcom: glink: Fix memory leak in driver probe
+  * msm: mdss: Don't cache the address of a stack variable in timings init
+  * msm: camera: isp: Fix memory leaks in vfe probe
+  * cpufreq: stats: Fix memory leaks when updating stats table
+  * msm: camera: sensor: Fix memory leaks when sensor probe fails
+  * power: msm-core: Fix mutex not getting unlocked in error path
+
+  [ Patrick Daly ]
+  * BACKPORT: rcu: Fix missing task information during rcu-preempt stall
+  * soc: qcom: secure_buffer: Fix memory leak
+
+  [ Petri Gynther ]
+  * arm64/configs: op3: increase log buffer to 1 MiB
+
+  [ TeYuan Wang ]
+  * arm64/configs: Remove LIMITS_LITE_HW config
+
+  [ Nathan Harold ]
+  * Add VTI to op3 Kernel Config
+
+  [ Ecco Park ]
+  * arm64/configs: op3: remove unused configs for Bluetooth
+
+  [ Steve Kondik ]
+  * op3: CONFIG_HZ_300
+  * op3: Adjust LEDs configuration slightly
+  * input: synaptics_s3320: Report nanosecond timestamps to improve accuracy
+  * qpnp-haptic: Dejank the haptics
+  * video: mdss: LiveDisplay driver
+  * mdss: livedisplay: Add commands to enable SRGB mode
+  * op3: Adjust display power settings
+  * op3: Update defconfig
+  * op3: Enable OverlayFS
+
+  [ Steve Muckle ]
+  * arm64: configs: op3: fix incorrect Android configs
+
+  [ Badhri Jagan Sridharan ]
+  * op3: defconfig: enable CONFIG_MEMORY_STATE_TIME
+
+  [ Paul Lawrence ]
+  * arm64/configs: op3: Audit syscalls blocked by seccomp
+
+  [ Srinivas Girigowda ]
+  * op3: Enable NAN data path kernel config
+
+  [ Siarhei Vishniakou ]
+  * op3: disable QBT1000 driver
+
+  [ Daniel Bristot de Oliveira ]
+  * BACKPORT: rcu: sysctl: Panic on RCU Stall
+
+  [ Paul E. McKenney ]
+  * UPSTREAM: rcu: Improve diagnostics for spurious RCU CPU stall warnings
+  * BACKPORT: rcu: Move RCU_BOOST variable declarations, eliminating #ifdef
+  * BACKPORT: rcu: Optionally run grace-period kthreads at real-time priority
+
+  [ Clark Williams ]
+  * BACKPORT: rcu: Unify boost and kthread priorities
+
+  [ edison_shih ]
+  * arm64: configs: op3: disable MSM_CACHE_M4M_ERP64_PANIC_ON_CE
+
+  [ Patrick Tjin ]
+  * Makefile: add -Werror
+  * gadget/f_fs: reduce logspam on suspend/resume
+  * arm64/config: op3: remove usb_mon and savedefconfig
+  * arm64/configs: op3: remove tuner support
+  * arm64/configs: op3: remove unused filesystem configs
+
+  [ martin_liu ]
+  * arm64: configs: op3: CONFIG_NR_CPUS=4
+
+  [ Jenhao Chen ]
+  * op3: disable CONFIG_INPUT_EVBUG
+
+  [ Francisco Franco ]
+  * oneplus: make sure some wakelock references are destroyed
+
+  [ Willi Ye ]
+  * input: synaptics_s3320: Clean up oneplus' logic
+  * input: synaptics: Ditch oneplus virtual abs code
+  * qpnp-haptic: Add sysfs interface to control intensity
+  * input: tri-state-key: Get it ready for CM
+
+  [ fluxi ]
+  * misc: fpc1020: Honor proximity state
+
+  [ ljkgpxs ]
+  * mdss: livedisplay: Add support for DCI-P3 mode
+
+  [ Mauro Andreolini ]
+  * block, bfq: add Early Queue Merge (EQM) to BFQ-v7r8 for 3.18.0
+
+  [ Paolo Valente ]
+  * block: cgroups, kconfig, build bits for BFQ-v7r8-3.18.0
+  * block: introduce the BFQ-v7r8 I/O sched for 3.18.0
+
+  [ Dustin Beard ]
+  * synaptics_driver: Fix transposed memset() arguments
+
+  [ Scott Mertz ]
+  * pwm: qpnp-pwm: add api for synchronous enable of pwms
+  * leds: leds-qpnp: add synchronized rgb control
+
+  [ Andrew Bresticker ]
+  * pstore/ram: Use memcpy_fromio() to save old buffer
+
+  [ Furquan Shaikh ]
+  * pstore/ram: Use memcpy_toio instead of memcpy
+
+  [ Geliang Tang ]
+  * pstore: add a helper function pstore_register_kmsg
+  * pstore: Fix return type of pstore_is_mounted()
+  * pstore: fix code comment to match code
+
+  [ Wang Long ]
+  * pstore: Fix the ramoops module parameters update
+  * fs/pstore: update the backend parameter in pstore module
+  * ramoops: make it possible to change mem_type param.
+
+  [ Ben Zhang ]
+  * pstore/ram: Strip ramoops header for correct decompression
+  * pstore/ram: verify ramoops header before saving record
+
+  [ long.wanglong ]
+  * fs/pstore: Optimization function ramoops_init_przs
+
+  [ Konstantin Khlebnikov ]
+  * pstore: do not use message compression without lock
+
+  [ alex chen ]
+  * pstore: Fix sprintf format specifier in pstore_dump()
+
+  [ Brian Norris ]
+  * FROMLIST: pstore-ram: fix NULL reference when used with pdata
+
+  [ Andrea Arcangeli ]
+  * fs/exec: fix use after free in execve
+
+  [ Tom Marshall ]
+  * kernel: Only expose su when daemon is running
+  * kernel: Fix potential refcount leak in su check
+
+  [ Marvin Tsai ]
+  * op3: refer to correct GPU firmware signature for msm8996sg
+
+  [ Thomas Gleixner ]
+  * hrtimer: Avoid locking in hrtimer_cancel() if timer not active
+
+  [ Balbir Singh ]
+  * UPSTREAM: sched/core: Fix a race between try_to_wake_up() and a woken up task
+
+  [ Frank Rowand ]
+  * of: cache phandle nodes to reduce cost of of_find_node_by_phandle()
+
+  [ Lianwei Wang ]
+  * UPSTREAM: cpu/hotplug: Handle unbalanced hotplug enable/disable
+
+  [ Vitaly Kuznetsov ]
+  * cpu-hotplug: convert cpu_hotplug_disabled to a counter
+
+  [ Gustavo Solaira ]
+  * msm: ep_pcie: Apply gpio settings based on the device tree flags
+  * ARM: dts: msm: Support IPC with PCIe host for mdm9650 EP TTP
+  * ARM: dts: msm: Enable reset via PM_RESIN_N for mdm9650 PCIe EP TTP
+  * ARM: dts: msm: Enable mhi_dev IPC_RTR export for mdm9650 CV2X
+  * ARM: dts: msm: Invert interrupt polarity for K61 on mdm9650 CV2X
+  * ARM: dts: msm: Enable reset via PM_RESIN_N for mdm9650 CV2X
+  * soc: qcom: ipc_router_mhi_xprt: Avoid memory leak on read_data
+
+  [ Ashwanth Goli ]
+  * net: rmnet_data: validate csum in SW
+
+  [ Johannes Berg ]
+  * cfg80211: limit scan results cache size
+
+  [ LuK1337 ]
+  * fs: Include sdfat driver
+  * Revert "msm: camerav2: isp: Reserve rdi ub based on image size"
+  * Revert "msm: camerav2: isp: Allocate UB for all source types"
+
+  [ Luca Stefani ]
+  * fs: sdfat: Disable by default
+  * ARM64: Fix merge derp
+
+  [ Tony Finch ]
+  * unifdef.c: use memcpy() instead of the dodgy strncpy().
+
+  [ Nathan Chancellor ]
+  * kconfig: Avoid format overflow warning from GCC 8.1
+
+  [ Nanda Okitavera ]
+  * fs: sdfat: remove unused counter when delayed metadata dirty is disabled
+
+  [ Paul Keith ]
+  * fs: sdfat: Add MODULE_ALIAS_FS for supported filesystems
+
+  [ Linux Build Service Account ]
+  * Merge "ARM: dts: msm: Add common CMA device configuration for sdx20"
+  * Merge "usb: gadget: u_smd: Initiate remote_wakeup only if enabled by host"
+  * Merge "usb: f_rmnet: Replace fifo_flush with ep_dequeue for notify_req"
+  * Merge "msm: vidc: Addition of enums for HLG and HDR10"
+  * Merge "msm: mdss: Add support to change the dma timeout value"
+  * Merge "msm8909: Disable unused configs"
+  * Merge "defconfig: msm8937: Enable VTI config for v4 and v6"
+  * Merge "defconfig: msm8998: Enable VTI config for v4 and v6"
+  * Merge "defconfig: msm8909w: Enable VTI config for v4 and v6"
+  * Merge "msm: ipa: fix the ipa-hw rules not clean"
+  * Merge "input: touchscreen: synaptics_dsx_2.6: reset device when resume"
+  * Merge "defconfig: msm8937: Enable VTI config for v4 and v6"
+  * Merge "ARM: dts: msm: sensor interrupt gpio name changed for MDM9607"
+  * Merge "msm: ADSPRPC: Handle map and unmap in 32 bit images"
+  * Merge "defconfig: msm8937: Enable GCM crypto configs"
+  * Merge "defconfig: msm8937: Enable GCM crypto configs"
+  * Merge "defconfig: msm8998: Enable GCM crypto configs"
+  * Merge "usb: gadget: u_smd: Check if SMD channel exists before queueing pull"
+  * Merge "ARM: dts: Update dt entries for SDIO and WLAN on MDM9650 TTP"
+  * Merge "defconfig: msm: enable himax touch driver compilation for msm8953"
+  * Merge "ARM: dts: msm: Enable verity for MSM8917/37/53/96"
+  * Merge "usb: ehci-msm-hsic: Disable runtime PM until device connects"
+  * Merge "msm: sps: Suppress bind/unbind attributes"
+  * Merge "diag: Add NULL checks for the mask and mask pointer"
+  * Merge "soc: qcom: Query and log Blackghost firmware version"
+  * Merge "ARM: dts: move android fstab node to SDW2500 dts"
+  * Merge "ARM: dts: Mount system and vendor for msm8909w from fstabs."
+  * Merge "ARM: dts: Mount system as root for msm8909"
+  * Merge "net: ipc_router: Initialize the sockaddr in recvmsg() handler"
+  * Merge "drm/msm: Fix the format prints in display driver"
+  * Merge "ASoC: msm: qdsp6v2: Fix uninitialized variable error"
+  * Merge "USB: ci13xxx_udc: Avoid unclocked access if pm_runtime_get fails"
+  * Merge "soc: qcom: bgcom: allocate a fixed buffer to avoid allocation delay"
+  * Merge "ARM: dts: msm: Mount system as root for msm8996"
+  * Merge "ARM: dts: msm: Mount system as root for msm8917"
+  * Merge "ARM: dts: msm: Mount system as root for msm8937"
+  * Merge "ARM: dts: msm: Mount system, vendor from fstab for apq8053 hw platforms"
+  * Merge "ARM: dts: msm: Mount system as root for msm8953"
+  * Merge "ARM: dts: msm: Delete redundant code in hx83100a LCD"
+  * Merge "msm: ipa: Error prints are misleading fix it"
+  * Merge "msm: mhi_dev: Handle wrap-around case for event ring updates"
+  * Merge "diag: Modify md_info and diag client map synchronization"
+  * Merge "msm: kgsl: Fix the missing IBs from the snapshot"
+  * Merge "Merge remote-tracking branch 'origin/caf/ps-qaes-driver/master' into msm-3.18"
+  * Merge "defconfig: msm: ARM_KERNMEM_PERMS and STACKPROTECTOR_STRONG for 8909w"
+  * Merge "msm: vidc: remove redundant init_completion() calls"
+  * Merge "fbdev: msm: Fix unintialisation of variables"
+  * Merge "sdcardfs: Fix the format prints in sdcardfs"
+  * Merge 809221176c5f79e7829513f1f1ad1cad612977db on remote branch
+  * Merge "driver: iio: imu: fix temperature issue of iam20680"
+  * Merge "crypto: pcrypt - fix freeing pcrypt instances"
+  * Merge "ASoC: msm: Add new dai links for compress capture for apq8009"
+  * Merge "msm: ipa: Setting appropriate config on MHI ep"
+  * Merge "msm: ipa: Add WLAN FW SSR event"
+  * Merge "mmc: block: Put card instead of release_host in mmc_ioctl"
+  * Merge "power: qpnp-fg-gen3: Configure ESR timer at shutdown"
+  * Merge "ARM: dts: msm: Update the ESR and sync-sleep config for 8909w+PM660"
+  * Merge "soc: qcom: bgcom: wait for spi to be free"
+  * Merge "BACKPORT: arm64: split thread_info from task stack"
+  * Merge "qcacld-2.0: remove wma_send_time_stamp_sync_cmd"
+  * Merge "qcacld-2.0: Security enhancement fixes for RSNE frame parser"
+  * Merge "msm: camera: cpp: Check for valid tx level"
+  * Merge "msm:ipa3: fix the header table gap issue"
+  * Merge "mdss: mdp3: Flush fences on dma stop"
+  * Merge "perf: Fix HW/SW event grouping failure"
+  * Merge "ASoC: msm: add new dai link for compress capture for apq8009"
+  * Merge "ASoC: msm: qdsp6v2: add routing controls to support compress capture"
+  * Merge "qcacld-2.0: add inject wmi cmd skip support"
+  * Merge "msm: mink: Convert Smcinvoke to platform driver"
+  * Merge "ARM: dts: msm: Add smcinvoke node for mdm9607"
+  * Merge "msm: mink: Add support of clock management for crypto ops"
+  * Merge "ARM: dts: msm: Add support of clock mgmt for MDM9607"
+  * Merge "power: smb2: expose CHARGE_FULL/CYCLE_COUNT properties"
+  * Merge "ARM: dts: msm: Support IPC with PCIe host for mdm9650 EP TTP"
+  * Merge "mdss: mdp: Fix fudge factor overflow check"
+  * Merge "ARM: dts: msm: Fix address and size width for common cma node for sdx20"
+  * Merge "qcacld-2.0: Prioritize connection req frames in pe queue"
+  * Merge 203023cb3d1e0cbf34a19ee25921948d8d3da7da on remote branch
+  * Merge 797d4b011a252032bc4be7812c967015945adf37 on remote branch
+  * Merge "ARM: dts: msm: add synaptics touch firmware for wearables"
+  * Merge "ARM: dts: msm: Enable mhi_dev IPC_RTR export for mdm9650 CV2X"
+  * Merge "soc: qcom: bgcom: free the allocated resources on device shutdown"
+  * Merge "Revert "rtc: alarm: Add power-on alarm feature""
+  * Merge "diag: Update the read buffers status properly"
+  * Merge "diag: Prevent out of bound access while initializing msg mask"
+  * Merge "driver: iio: imu: asm330 early buffer implemented"
+  * Merge "msm:ipa: Prevent NAT table deletion only if public ip is not assigned"
+  * Merge "ARM: dts: msm: Invert interrupt polarity for K61 on mdm9650 CV2X"
+  * Merge "Merge remote-tracking branch 'origin/caf/ps-qaes-driver/master' into msm-3.18"
+  * Merge "msm: kgsl: Add a property to find alignment of secure buffers"
+  * Merge "msm: kgsl: Add a property to find if secure context is supported"
+  * Merge "msm: ipa3: Add mutex to prevent race condition"
+  * Merge "msm: mdss: Use TPG to handle null commit"
+  * Merge "thermal: qpnp-adc-tm: Fix aborting suspend"
+  * Merge "Revert "msm: cpp: Reduce CPP timeout in case of hardware delay""
+  * Merge "msm: ipa: Validate routing rule id"
+  * Merge "asoc : msm: Fix zero size pointer issue"
+  * Merge "msm: kgsl: Replace scm call api with its atomic version"
+  * Merge "ARCH: arm: defconfig: Enable SMI130 driver config for MDM9x07"
+  * Merge "qcacld-2.0: Check NULL pointer"
+  * Merge "qcacld-2.0: change IPA dump log module and enable softIRQ threshold"
+  * Merge "net: core: null pointer derefernce in sockev_client_cb"
+  * Merge "msm: ais: Handling bigger value than upper bound in msm_cpp_irq api"
+  * Merge "msm: ais: Fix out-of-bounds read in string class name"
+  * Merge "driver: iio: imu:  SMI130 early buffer implemented"
+  * Merge "Merge android-3.18.119 (0462616) into msm-3.18"
+  * Merge "drivers: iio: imu: fixed asm330 early buff bugs"
+  * Merge "ARM: dts: msm: Enable reset via PM_RESIN_N for mdm9650 CV2X"
+  * Merge 4bed4004996386ce40986108f82ba21ba3c8ba79 on remote branch
+  * Merge "Merge android-3.18.120 (78291159) into msm-3.18"
+  * Merge "usb: dwc3: Prevent runtime_suspend after wakeup event"
+  * Merge "diag: Initialize memory device memory pools"
+  * Merge "qcacld-2.0: Add channel switch notification for STA"
+  * Merge "diag: Prevent accessing uninitialized diag_md_info member"
+  * Merge "net : update enum entry for netlink_sockev."
+  * Merge "net: memset smsg to avoid the padding data"
+  * Merge "qcacld-2.0: Set conparam to STA mode when call hdd_wlan_exit"
+  * Merge "msm: mdss: Fix Gamma LUT bounds condition"
+  * Merge "power: qpnp-fg-gen3: Use disable_irq_nosync for disabling interrupts"
+  * Merge "defconfig: msm8909: Enable VTI config for v4 and v6"
+  * Merge "defconfig: msm8909: Enable GCM crypto configs"
+  * Merge "nl80211: nl80211_update_ft_ies to validate NL80211_ATTR_IE"
+  * Merge "msm: mdss: try recovering from PP timeout without panic"
+  * Merge "soc: qcom: bgcom: disable/enable interrupt on device suspend/resume"
+  * Merge "defconfig: msm8909-perf: Enable MODULE_SIG_SHA512"
+  * Merge "aio: hold an extra file reference over AIO read/write operations"
+  * Merge "qcacld-2.0: Reduce stack consumption to avoid stack overflow"
+  * Merge "defconfig: msm8909: enable lz4 for zram"
+  * Merge "msm: ipa: Release wlan cons resource"
+  * Merge 351c169810b3ccd24b399f9db4ff1181cebd85ac on remote branch
+  * Merge "diag: Update the logging codes of events, logs and msgs"
+  * Merge "wcnss: Fix buffer overflow in wcnss_prealloc_get"
+  * Merge "msm: mink: keep clocks enabled for duration of invoke call"
+  * Merge "arm64/vdso: Fix nsec handling for CLOCK_MONOTONIC_RAW" into kernel.lnx.3.18.r34-rel
+  * Merge "Revert "net : update enum entry for netlink_sockev."" into kernel.lnx.3.18.r34-rel
+  * Merge "Revert "net : update enum entry for netlink_sockev.""
+  * Merge "arm64/vdso: Fix nsec handling for CLOCK_MONOTONIC_RAW"
+  * Merge "soc: qcom: glink: Modify ipc logging for error case"
+  * Merge "defconfig: Enable CONFIG_SCHED_DEBUG for perf_defconfig"
+  * Merge "msm: camera: Fix arbitrary kernel write"
+  * Merge "rtac: Add mutex lock to ensure proper fops access"
+  * Merge "power: fg-util: Wait for soc_update completion upon timeout"
+  * Merge "msm: mdss: sanitize debugfs inputs when reading mdp memory"
+  * Merge "msm: ipa: Protect ipa default routing table"
+  * Merge "i2c-msm-v2: Handle Null pointer de-reference"
+  * Merge "diag: Clearing the mask before switching logging mode"
+  * Merge 8e08fa8351d631e7a6d9367e3a27fe7b79a6f828 on remote branch
+  * Merge "Revert "dm: use bioset_create_nobvec()""
+  * Merge "defconfig: Enable rng driver for msm8909"
+  * Merge "msm: kgsl: create sysfs entries to expose memory usage"
+  * Merge "soc: qcom: print BG version in log."
+  * Merge "UPSTREAM: Revert "FROMLIST: binder: fix proc->files use-after-free""
+  * Merge "binder: fix proc->files use-after-free"
+  * Merge "qcacld-2.0: Check for following radio link stats events"
+  * Merge "msm: ais: Fix arbitrary kernel write"
+  * Merge 44df88fa5a6db8a672c9d143a32bcb1746bbc007 on remote branch
+  * Merge 071352ee12ba1f1dac8c11b021b60dc2e959b66f on remote branch
+  * Merge "dm-req-crypt: Add support for immutable bio_vec"
+  * Merge "msm: ipa3: Fix to validate the user inputs"
+  * Merge "xfrm: validate template mode"
+  * Merge "md:dm: Fix Key size for GPCE"
+  * Merge "dm-req-crypt: Remove discard support as it keep reporting errors"
+  * Merge "defconfig: msm8909: Enable config flags for req-crypt"
+  * Merge "defconfig: Remove FIPS flag from config"
+  * Merge "Revert "block: use bio_clone_fast() in blk_rq_prep_clone()""
+  * Merge "Revert "dm: remove nr_iovecs parameter from alloc_tio()""
+  * Merge "soc: qcom: Remove smp2p test support"
+  * Merge "defconfig: msm8909: Enable missing network options"
+  * Merge 45615c15c0a8e7811361549d95572cec08ffba66 on remote branch
+  * Merge b129d024878f9bf05884692ca6fcbaee9a0823b7 on remote branch
+  * Merge "af_key: unconditionally clone on broadcast"
+  * Merge "qcacld-2.0: Fix OOB read in scan_id get"
+  * Merge "qcacld-2.0: Fix possible buffer overflow in wma_stats_ext_req"
+  * Merge 76a73ec1f9bd326af37e5e89efc7b6531b94f328 on remote branch
+  * Merge f031013a654310d8388b3a20bc7d9526e4a175d4 on remote branch
+  * Merge "qcacld-2.0: Update max TX power after set reg"
+  * Merge "qcacld-2.0: check the data length when downloading firmware"
+  * Merge 7b6f25ac8d29f4622af3b5a690fcebfcb73a7106 on remote branch
+  * Merge 6202d1d9d9ba3cfc464225087c65e2d079b6d689 on remote branch
+  * Merge "drivers: iio: imu: avoid writing sysfs while buffering"
+  * Merge "usb: ehci-msm-hsic: use work_queue to invoke runtime_pm_allow"
+  * Merge "defconfig: msm8996: Enable GCM crypto configs"
+  * Merge "mdss: mdp3: Tag fence name with seqno"
+  * Merge "drivers: input: sensors: fix smi130 gyro initial values are high"
+  * Merge "mtd: msm_qpic_nand: An incorrect page memset during ECC errors"
+  * Merge "drivers: iio: imu: Fixed minor bugs of IMU sensors"
+  * Merge "msm: camera: Fix for OOB security CR"
+  * Merge "msm: mdss: Fix Null Pointer Dereference in unmap error case"
+  * Merge "msm: kgsl: Correctly limit max number of contexts per process"
+  * Merge "qcacld-2.0: Add vos_list_t api without mutex operation"
+  * Merge 635bbadc01ab42ff5970bcadc915b73806e4bec2 on remote branch
+  * Merge c3ae3631dfbc7726fa7191f55d9140ffbcce4a1a on remote branch
+  * Merge "msm: ais: Fix for OOB security CR"
+  * Merge "ANDROID: sdcardfs: Don't use OVERRIDE_CRED macro"
+  * Merge "qcacld-2.0: Fix connState while processing disconnect from stop adapter"
+  * Merge "qcacld-2.0: Fix buffer overwrite problem in GETIBSSPEERINFO"
+  * Merge "mdm: Update frequence & Tx power in the regulatory database"
+  * Merge "qcacld-2.0: Check connected peer number before enable MAC Counter"
+  * Merge "msm: wlan: Update ETSI1 and ETSI13 countries"
+  * Merge "msm: camera: isp: Fix invalid type conversion"
+  * Merge "ARM: dts: mdm: Enable dynamic address for wlan ramdump"
+  * Merge f30aab2c62ed507f70ac4e556c8aeec56d2e3512 on remote branch
+  * Merge e4646b07ba96d4110362310266f05f27d42bc360 on remote branch
+  * Merge "iommu/iommu-debug: fix buffer overflows in debugfs read functions"
+  * Merge "SoC: msm: Add global mutex lock to fix the panic issue"
+  * Merge "msm: ais: ispif: Fix invalid type conversion"
+  * Merge "usb: gadget: f_mbim: Remove usage of notify_state"
+  * Merge "usb: gadget: f_mbim: Handle response complete before notify_complete"
+  * Merge "qcacld-2.0: Implement OOB"
+  * Merge "qcacld-2.0: Support P2P by one wlan interface"
+  * Merge "ARM: dts: msm: Disable APC CPR at cold for 9x07"
+  * Merge "soc: qcom: Validate read and write index before calculating ptr"
+  * Merge "arm64: Move BP hardening to check_and_switch_context"
+  * Merge 63e9c809386e0bd72512684ea0c2af53e0785a79 on remote branch
+  * Merge d190cf2e9d9d4a92866b0e4975d5240bb26c38c2 on remote branch
+  * Merge "fbdev: mdss: Signal pending retire fence"
+  * Merge "qcacld-2.0: Compare the length of command in hdd_driver_command"
+  * Merge "qcacld-2.0: Add support for SAE AKM suites"
+  * Merge "qcacld-2.0: Add SAE related ini and cap exchange changes"
+  * Merge "ARM: dts: msm: Define power configuration for msm8996 and msm8998"
+  * Merge "msm: vidc: Handle perf mode configuration"
+  * Merge "qdsp6v2: apr: check for packet size to header size comparison"
+  * Merge "qcacld-2.0: Support reading GC TSF file after GC interface freed"
+  * Merge "qcacld-2.0: Add regdb"
+  * Merge "qcacld-2.0: Add support to get customized wow reason"
+  * Merge "ASoC: msm: qdsp6v2: add range check for audio port index"
+  * Merge "diag: Increment data ready only if it is first update"
+  * Merge "diag: Update msg mask's ranges properly"
+  * Merge "msm: ice: check for crypto engine availability"
+  * Merge "diag: Add missing protection while accessing session's info"
+  * Merge "msm: vidc: ignore processing responses in invalid state"
+  * Merge "msm: vidc: do not set video state to DEINIT very early"
+  * Merge "msm: mdss: correct the DTV panel fps calculation"
+  * Merge "dsp: asm: validate payload size before access"
+  * Merge "msm: vidc: fix KCFI errors"
+  * Merge "qdsp6v2: q6usm: Check size of payload before access"
+  * Merge "dsp: q6voice: Check size of shared memory buffer before access"
+  * Merge a3654a83a5ccf0574517103dd9dc1ce80527a582 on remote branch
+  * Merge cd2b065f83e92d23bd9600c9521f53848a2e26ef on remote branch
+  * Merge "dsp: afe: check for payload size before payload access"
+  * Merge "drivers: soc: qcom: Added check to avoid opening multiple instance"
+  * Merge "dsp: q6usm: Release spinlock before return if invalid payload size"
+  * Merge "msm: kgsl: Limit log frequency in case of context count maxed out"
+  * Merge 3ad2b2b803592916ef0d254ded94ed9c70f07cb6 on remote branch
+  * Merge db2e29267dc9a93d36ccd873782617bf4822d2fd on remote branch
+  * Merge "diag: dci: Validate dci client entries prior read"
+  * Merge "lsm: check payload size validity before using it as array index"
+  * Merge "soc: qcom: Bail out when number of clusters is set to 0"
+  * Merge "msm: qdsp6v2: Check size of payload before access"
+  * Merge "msm: sps: Update debug message format specifier"
+  * Merge "msm: camera_v2: handle the error value returned during get clock"
+  * Merge "msm: ais: handle the error value returned during get clock"
+  * Merge "diag: Validate command length against size of command structure"
+  * Merge "msm: camera : Lock Implementation for avoid race condition"
+  * Merge c34e289099888208e829f68102ea26eade1c8efc on remote branch
+  * Merge 2eacf3edfbe32db5632e59f3da0c3a88f4d3f429 on remote branch
+
+  [ Manoj Prabhu B ]
+  * diag: Add NULL checks for the mask and mask pointer
+  * diag: Modify md_info and diag client map synchronization
+  * diag: Update the read buffers status properly
+  * diag: Prevent out of bound access while initializing msg mask
+  * diag: Prevent accessing uninitialized diag_md_info member
+  * diag: Update the logging codes of events, logs and msgs
+  * diag: dci: Validate dci client entries prior read
+  * diag: dci: Validate dci response length before parsing
+  * diag: Validate command length against size of command structure
+  * diag: Check command size against the minimum before parsing
+  * diag: Check buffer size against command structure size
+
+  [ Kunlei Zhang ]
+  * lsm: check payload size validity in lsm_event_detect_status_v3
+
+  [ Rajesh Kemisetti ]
+  * msm: kgsl: Limit log frequency in case of context count maxed out
+  * msm: kgsl: Fix race condition while making page as dirty
+
+  [ tinlin ]
+  * qcacld-2.0: Allocate extra 100 bytes to add missing IE info
+  * qcacld-2.0: Check ac in limSetEdcaBcastACMFlag
+  * qcacld-2.0: Security enhancement fixes for RSNE frame parser
+  * qcacld-2.0: Fix out of order issue in wmi_unified.h
+  * qcacld-2.0: Fix in wma_vdev_start_rsp_ind
+  * qcacld-2.0: Fix compile error in parserApi.c
+  * qcacld-2.0: Remove warning log when wlan resumes
+  * qcacld-2.0: Free memory when sending 11k empty beacon response
+  * qcacld-2.0: Check for minimum frameLen for action frames
+  * qcacld-2.0: Fix possible OOB access in lim_process_assoc_req_frame
+  * qcacld-2.0: Fix out-of-bounds access in limProcessAssocReqFrame
+  * qcacld-2.0: Fix possible OOB access in limProcessDisassocFrame
+  * qcacld-2.0: Fix possible OOB access while sending NAN msg to firmware
+  * qcacld-2.0: Fix possible OOB read in ProcDnldRsp
+  * qcacld-2.0: Add macro WLAN_FEATURE_11W
+  * qcacld-2.0: Add regdb
+  * qcacld-2.0: Fix compile error
+  * qcacld-2.0: Add coverity change
+  * qcacld-2.0: Add WMI_COEX_CONFIG_BTC_DUTYCYCLE
+  * qcacld-2.0: Define CONFIG_VOS_MEM_PRE_ALLOC
+  * qcacld-2.0: Fix OOB read in sme_RrmProcessBeaconReportReqInd
+  * qcacld-2.0: Correct typo in csrRoamJoinedStateMsgProcessor
+
+  [ Vikash Garodia ]
+  * msm: vidc: Ensure validity of shared Q indices
+
+  [ lifeng ]
+  * qcacld-2.0: Possible buffer overflow in wma_nan_rsp_event_handler
+  * qcacld-2.0: Add "g_enable_bcast_probe_rsp" INI and pass it to firmware
+  * qcacld-2.0: Enable FILS capability bit in extended capability IE
+  * qcacld-2.0: Fix buffer overwrite in limMlmAddBss()
+  * qcacld-2.0: Drop mgmt frames if no.of RX mgmt packets reaches to threshold
+  * qcacld-2.0: Fix sdio mbox corruption on rome card
+  * qcacld-2.0: Adjust motion detection threshold variables as 32bit
+  * qcacld-2.0: Support P2P by one wlan interface
+  * qcacld-2.0: Correct cb mode in vht40/80 channel switch
+  * qcacld-2.0: Do sanity check about pci dirver data
+  * qcacld-2.0: Do sanity check about usb interface data in suspend
+  * qcacld-2.0: Fix possible buffer overflow in sirConvertAddtsRsp2Struct
+  * qcacld-2.0: Enable survey dump on SAP
+  * qcacld-2.0: Fix possible OOB read in stats event handler
+
+  [ Vijay kumar Tumati ]
+  * msm: camera : Lock Implementation for avoid race condition
+
+  [ Wu Gao ]
+  * qcacld-2.0: Set conparam to STA mode when call hdd_wlan_exit
+  * qcacld-2.0: Change log level for frequent logs
+  * qcacld-2.0: Fix potential OOB read when indicate mgmt frame
+  * qcacld-2.0: Remove limitation about length of probe response ie
+
+  [ E V Ravi ]
+  * msm: ais: Fix arbitrary kernel write
+  * msm: ais: Fix for OOB security CR
+  * msm: ais: ispif: Fix invalid type conversion
+  * msm: ais: handle the error value returned during get clock
+  * msm: ais : Lock Implementation for avoid race condition
+
+  [ Srikanth Uyyala ]
+  * msm: camera_v2: handle the error value returned during get clock
+
+  [ Jishnu Prakash ]
+  * msm: sps: Update debug message format specifier
+
+  [ Chetan C R ]
+  * defconfig: msm: ARM_KERNMEM_PERMS and STACKPROTECTOR_STRONG for 8909w
+  * defconfig: msm8909: enable lz4 for zram
+  * soc: qcom: Bail out when number of clusters is set to 0
+
+  [ Nirmal Abraham ]
+  * msm: mdss: Ignore overflow errors in dma_tpg_tx path
+
+  [ CNSS_WLAN Service ]
+  * Merge "qcacld-2.0: Fix OOB access in htt_rx_ring_fill_n" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Allocate extra 100 bytes to add missing IE info" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Check ac in limSetEdcaBcastACMFlag" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: fix missing process deauth/disassoc in 11w" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: OOB access may occur due to total numChannels exceeds max value" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix commnd eSmeCommandRoam stuck issue" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix out of order issue in wmi_unified.h" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Reject non-RSN/WPA Assoc request" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Process DO_ACS vendor command only in SAP/P2P_GO mode" into wlan-cld2.driver.lnx.1.0
+  * Merge "Revert "Revert "qcacld-2.0: update country and regdomain info""" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: fix find regpair fail issue" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Possible kernel info leak in sme_updateP2pIe()" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Possible buffer overflow in wma_stats_ext_event_handler" into wlan-cld2.driver.lnx.1.0
+  * Merge changes I0ecc838b,I00cedf59 into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Send valid STA ID to FW while processing get stats" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add aggregate stats support for SAP" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix in wma_vdev_start_rsp_ind" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix "pe_err" build error when WLAN_FEATURE_FILS_SK defined" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: enable MCC SAP+P2P client concurrency mode" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Set the minsize of SuppChannels IE to 2" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: fix compile errors" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: remove mutex in wmi send" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add support for Quartz and Naples coex" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add cfg80211_wowlan info when initialize wiphy" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add sanity check for number of MPDU" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Revert "qcacld-2.0: Refine type of formal parameter when calling do_div"" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: correct some condition flags in PCIe HIF" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Drop mgmt frames if no.of RX mgmt packets reaches to threshold" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: fix compile in le2.0 code" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Check channel_count in DCC_GET_STATS command" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Relax runtime suspend check and force target dump" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Free memory when sending 11k empty beacon response" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix the NULL pointer operation issue" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix wrong kernel address access issue" into wlan-cld2.driver.lnx.1.0
+  * Merge "Release 4.0.11.213X" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4509300 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4519030 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4625060 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4647496 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4662126 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4669157 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4677643 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4687827 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4703725 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4704839 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4712573 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4729571 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4798258 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4805563 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4806347 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4811569 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4822672 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4827718 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4867158 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4901851 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4920552 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4943781 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4962465 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 4980596 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 5005314 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 5011639 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 5019516 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 5038197 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 5055458 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 5080653 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 5087294 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 5157294 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 5169767 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 5188984 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Send thermal events for userbased FW throttling" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Release reference of peer after copy cfr data" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix possible OOB access in limProcessDisassocFrame" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Handle TCP TX throttling new logic when kernel > 3.19" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Change log level for frequent logs" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Allow one shot CFR request via netlink" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add data validation for avoid frequency command" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 5955889 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add PBM and MP only wow feature" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Speed up firmware DRAM/IRAM/AXI dumps" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Don't define pci related api if HIF_PCI isn't defined" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Restore the correct credit for EP" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CL 5987499 - Update fw common interface files" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add HPCS Module Ids" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: fix KW issue about NULL pointer dereference" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Update correct format of copyright year" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Do not call kernel api spin_lock directly" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: fix self address supposed peer on SAP mode" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add gettime of PTP for NON-QC platform" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Reserve some netlink messageID to customer for customization" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Update driver to support Linux kernel versions 4.12+" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix potential out of bound issue" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Support country code & regdomain map for MM" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Update regulatory information" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Validate all channels for avoid_freq channel list" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add reset resume rather than cold reset target" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Break out of OOB task after entering suspend mode" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Adjust motion detection threshold variables as 32bit" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add macro WLAN_FEATURE_11W" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Get tsf by register" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Correct cb mode in vht40/80 channel switch" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: oob_irq_handler should be called if oob gpio is low" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix possible OOB in limProcessAssocReqFrame" into wlan-cld2.driver.lnx.1.0
+  * Merge changes Ie113f84d,I53a03a3e,Id8f48a18,I474cfe9e,I65f0cb01,I0b28b755,I6807f49a,Ia87088dc into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add smart antenna APIs" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Reset Hpcs when all params of setHpcsParams are 0" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix possible OOB read in ProcDnldRsp" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Always send assoc req/rsp" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add support for OWE" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Avoid buffer overflow when process SA query action frame" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add register key per_chain_stats" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add support to configure tx use 2 chain" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Disable roaming for OWE" into wlan-cld2.driver.lnx.1.0
+  * Merge changes Ifb5b11c3,I20eb7aa7,I70a52030 into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix OOB read in hdd_populate_wifi_signal_info" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add smart antenna module" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Dynamic Power Control when do Suspend/Resume" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Memory leak fix in athdiagpfs" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Purge neighbor report cache if unsolicited" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add a host interest flag to tell target do reset resume" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: fix the null pointer access issue when shutdown" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix possible buffer overflow in sirConvertAddtsRsp2Struct" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Do unmap dma only for mapped and non ipa dma" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix compile error" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Remove the restriction of neighbor report number" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Set tsf host gpio as invalid by default" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add a state for SA" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Dynamic Power Control when do Suspend/Resume" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix incorrect challenge text length" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Possible OOB access in wlan_hdd_cfg80211_start_bss()" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: CSA optimization for bandwidth switch" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add coverity change" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Update PMK cache and fix SAE PMK Cache Auth failure" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add primary peer setting for MAC counter" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Enable survey dump on SAP" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add iwpriv command to support TDCC" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Add WMI_COEX_CONFIG_BTC_DUTYCYCLE" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Define CONFIG_VOS_MEM_PRE_ALLOC" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix buffer overflow in process_rx_info etc" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Clear up DFS rules for multiple interfaces" into wlan-cld2.driver.lnx.1.0
+  * Merge "qcacld-2.0: Fix OOB read in sme_RrmProcessBeaconReportReqInd" into wlan-cld2.driver.lnx.1.0
+
+  [ kunleiz ]
+  * lsm: check payload size validity before using it as array index
+  * lsm: check payload size validity before using it as array index
+
+  [ Zhang Qian ]
+  * Revert "qcacld-2.0: HL: Obtain CFR data via HTT and send to user"
+  * qcacld-2.0: Fix loading failure on 32bit platform
+  * qcacld-2.0: Add register key per_chain_stats
+  * qcacld-2.0: Add smart antenna module
+  * qcacld-2.0: Add a state for SA
+  * qcacld-2.0: Add smart antenna matrix
+  * qcacld-2.0: CL 6413865 - Update fw common interface files
+  * qcacld-2.0: CL 6418415 - Update fw common interface files
+  * qcacld-2.0: CL 6432735 - Update fw common interface files
+  * qcacld-2.0: CL 6438294 - Update fw common interface files
+  * qcacld-2.0: CL 6443430 - Update fw common interface files
+  * qcacld-2.0: CL 6460094 - Update fw common interface files
+  * qcacld-2.0: CL 6467333 - Update fw common interface files
+  * qcacld-2.0: CL 6521585 - Update fw common interface files
+  * qcacld-2.0: CL 6529657 - Update fw common interface files
+  * qcacld-2.0: CL 6535788 - Update fw common interface files
+  * qcacld-2.0: CL 6565901-6699888 - Update fw common interface files
+  * qcacld-2.0: CL 6712641-6856758 - Update fw common interface files
+  * qcacld-2.0: Add interference stats for smart antenna
+  * qcacld-2.0: Add primary peer setting for MAC counter
+  * qcacld-2.0: Add RX stats indication to SA
+  * qcacld-2.0: Propagate fw PPDU stats APIs
+  * qcacld-2.0: Add ppdu tx stats
+
+  [ bings ]
+  * qcacld-2.0: Add sanity check variable_data len in update_fils_data
+  * qcacld-2.0: Fix "pe_err" build error when WLAN_FEATURE_FILS_SK defined
+  * qcacld-2.0: Set the minsize of SuppChannels IE to 2
+  * qcacld-2.0: Always register frames for supplicant in hdd_wlan_startup
+  * qcacld-2.0: Initialize bw in get station if 11ac feature is defined
+  * qcacld-2.0: Speed up firmware DRAM/IRAM/AXI dumps
+  * qcacld-2.0: Don't define pci related api if HIF_PCI isn't defined
+  * qcacld-2.0: Call HIFMaskInterrupt only for sdio device
+  * qcacld-2.0: Do dma unmap when tx desc allocation fails
+  * qcacld-2.0: Add dma map/unmap debug
+  * qcacld-2.0: Do not call kernel api spin_lock directly
+  * qcacld-2.0: Add vos_list_t api without mutex operation
+  * qcacld-2.0: Remove dead code tUpdateCFParams and WMA_UPDATE_CF_IND
+  * qcacld-2.0: Add gettime of PTP for NON-QC platform
+  * qcacld-2.0: Update driver to support Linux kernel versions 4.12+
+  * qcacld-2.0: Avoid possible buffer over-read in wma_wow_wakeup_host_event
+  * qcacld-2.0: Enable 11W feature for pci interface
+  * qcacld-2.0: Implement OOB
+  * qcacld-2.0: CL 5538220 - CL 6359821 Update fw common interface files
+  * qcacld-2.0: Get tsf by register
+  * qcacld-2.0: Break out of OOB task after entering suspend mode
+  * qcacld-2.0: oob_irq_handler should be called if oob gpio is low
+  * qcacld-2.0: Add dummy function for supplicant deprecated commands
+  * qcacld-2.0: Compare the length of command in hdd_driver_command
+  * qcacld-2.0: Add support for SAE AKM suites
+  * qcacld-2.0: Add SAE related ini and cap exchange changes
+  * qcacld-2.0: Add changes to trigger SAE in supplicant
+  * qcacld-2.0: Add changes for auth in send mgmt path
+  * qcacld-2.0: Add changes to send SAE auth frame to user space
+  * qcacld-2.0: Add SAE auth timer
+  * qcacld-2.0: Add changes to handle SAE status
+  * qcacld-2.0: Changes to support PMK caching for SAE
+  * qcacld-2.0: Disable roaming for SAE
+  * qcacld-2.0: Trigger/handle SAE using cfg80211
+  * qcacld-2.0: Always send assoc req/rsp
+  * qcacld-2.0: Add support for OWE
+  * qcacld-2.0: Disable roaming for OWE
+  * qcacld-2.0: Enable SAE by default
+  * qcacld-2.0: Remove the ssidlen check in get_sta_stats
+  * qcacld-2.0: Add OWE IEs
+  * qcacld-2.0: Reset Hpcs when all params of setHpcsParams are 0
+  * qcacld-2.0: Support reading GC TSF file after GC interface freed
+  * qcacld-2.0: Do unmap dma only for mapped and non ipa dma
+  * qcacld-2.0: Set tsf host gpio as invalid by default
+  * qcacld-2.0: Update PMK cache and fix SAE PMK Cache Auth failure
+  * qcacld-2.0: Clear up DFS rules for multiple interfaces
+  * qcacld-2.0: Enable CONFIG_WLAN_FEATURE_SAE by default
+
+  [ Vatsal Bucha ]
+  * qdsp6v2: apr: check for packet size to header size comparison
+  * qdsp6v2: q6usm: Check size of payload before access
+  * qdsp6v2: q6usm: Check size of payload before access
+  * dsp: q6voice: Check size of shared memory buffer before access
+  * dsp: q6usm: Release spinlock before return if invalid payload size
+  * msm: qdsp6v2: Check size of payload before access
+
+  [ Will Huang ]
+  * qcacld-2.0: Relax runtime suspend check and force target dump
+  * qcacld-2.0: Add PBM and MP only wow feature
+  * qcacld-2.0: Update correct format of copyright year
+  * qcacld-2.0: Update correct format of copyright year
+  * qcacld-2.0: Add reset resume rather than cold reset target
+  * qcacld-2.0: Add support to get customized wow reason
+  * qcacld-2.0: Abort scan if connecting in progress
+  * qcacld-2.0: Purge neighbor report cache if unsolicited
+  * qcacld-2.0: Add a host interest flag to tell target do reset resume
+  * qcacld-2.0: Fix incorrect challenge text length
+  * qcacld-2.0: Add iwpriv command to support TDCC
+
+  [ Soumya Managoli ]
+  * ASoC: msm: Update SLIMBUS2 Hostless FE DAI for msm8953
+  * asoc : msm: Fix zero size pointer issue
+  * ASoC: msm: Modify buf size check to prevent OOB error
+
+  [ gaolez ]
+  * qcacld-2.0: Revert "qcacld-2.0: Refine type of formal parameter when calling do_div"
+  * qcacld-2.0: fix compile in le2.0 code
+  * qcacld-2.0: Add new parameter for iwpriv setPower
+  * qcacld-2.0: Update max TX power after set reg
+  * qcacld-2.0: Update max TX power after reg set by user
+  * qcacld-2.0: Add support to configure tx use 2 chain
+  * qcacld-2.0: Fix wild pointer issue for AC tx queue optimization
+  * qcacld-2.0: CSA optimization for bandwidth switch
+
+  [ Deepak Kumar Singh ]
+  * soc: qcom: Remove smp2p test support
+  * soc: qcom: qmi_encdec: Restrict string length in decode
+
+  [ Tiger Yu ]
+  * qcacld-2.0: Fix buffer overflow in process_rx_info etc
+
+  [ Min Liu ]
+  * qcacld-2.0: Process DO_ACS vendor command only in SAP/P2P_GO mode
+  * qcacld-2.0: Fix FT roaming failure for WEP Auto switch auth mode
+  * qcacld-2.0: Fix FT roaming failure issue
+  * qcacld-2.0: Fix connState while processing disconnect from stop adapter
+  * qcacld-2.0: Validate all channels for avoid_freq channel list
+  * qcacld-2.0: Fix OOB read in hdd_populate_wifi_signal_info
+  * qcacld-2.0: Possible OOB access in wlan_hdd_cfg80211_start_bss()
+
+  [ Ke Huang ]
+  * qcacld-2.0: remove wma_send_time_stamp_sync_cmd
+  * qcacld-2.0: add inject wmi cmd skip support
+  * qcacld-2.0: Fix the NULL pointer operation issue
+  * qcacld-2.0: Fix wrong kernel address access issue
+  * qcacld-2.0: Dynamic Power Control when do Suspend/Resume
+  * qcacld-2.0: fix the null pointer access issue when shutdown
+  * qcacld-2.0: Dynamic Power Control when do Suspend/Resume
+
+  [ Ajit Pandey ]
+  * drivers: soc: qcom: Added check to avoid opening multiple instance
+
+  [ Govindaraj Rajagopal ]
+  * msm: vidc: fix KCFI errors
+
+  [ Shadab Naseem ]
+  * scripts: gcc-wrapper: Route the GCC errors to stderr
+
+  [ Xiaojun Sang ]
+  * dsp: validate token before usage as array index
+  * dsp: asm: validate payload size before access
+
+  [ Yu Ouyang ]
+  * qcacld-2.0: Fix commnd eSmeCommandRoam stuck issue
+  * qcacld-2.0: fix self address supposed peer on SAP mode
+  * qcacld-2.0: Fix NULL point may be dereferenced
+
+  [ Maheshwar Ajja ]
+  * msm: vidc: do not set video state to DEINIT very early
+  * msm: vidc: ignore processing responses in invalid state
+
+  [ Raghavendra Ambadas ]
+  * msm: mdss: correct the DTV panel fps calculation
+
+  [ Chaitanya Pratapa ]
+  * msm: ipa: fix to validate the ioctl WAN_IOC_SEND_LAN_CLIENT_MSG params
+
+  [ Hardik Arya ]
+  * diag: Clearing the mask before switching logging mode
+  * soc: qcom: Remove smp2p test support
+  * diag: Handle data ready notification properly
+  * diag: Mark Buffer as NULL after freeing
+  * soc: qcom: Validate read and write index before calculating ptr
+  * diag: Add missing protection while accessing session's info
+  * diag: Update msg mask's ranges properly
+
+  [ Neeraj Soni ]
+  * md:dm: Fix Key size for GPCE
+  * ARM: dts: msm8909go: Enable supported crypto algos
+  * msm: ice: check for crypto engine availability
+
+  [ Guisen Yang ]
+  * qcacld-2.0: Fix KW update about qcacld-dsrc issue
+  * qcacld-2.0: Remove the restriction of neighbor report number
+
+  [ donglian ]
+  * qcacld-2.0: Fix KW issues in WLAN driver
+  * qcacld-2.0: Memory leak fix in athdiagpfs
+
+  [ Sreelakshmi Gownipalli ]
+  * diag: Initialize memory device memory pools
+  * diag: Increment data ready only if it is first update
+
+  [ Xiaoyu Ye ]
+  * ASoC: msm: qdsp6v2: add range check for audio port index
+  * dsp: codecs: fix range check for audio buffer copying
+
+  [ Rohit kumar ]
+  * dsp: asm: Add check for num_channels before calling q6asm_map_channels
+
+  [ Jianmin Zhu ]
+  * qcacld-2.0: Avoid buffer overflow when handle 11w rmf
+  * qcacld-2.0: Avoid buffer overflow when process SA query action frame
+
+  [ Gerrit - the friendly Code Review server ]
+  * Merge changes  into msm-3.18
+  * Merge changes  into msm-3.18
+  * Merge changes  into msm-3.18.c13
+  * Merge changes  into msm-3.18.c13
+
+  [ Sanjay Singh ]
+  * msm: vidc: Initialize DCVS load properly
+
+  [ Darshan Kumsi Srinivasa ]
+  * ARM: dts: msm: Define power configuration for msm8996 and msm8998
+  * msm: vidc: Handle perf mode configuration
+
+  [ Qian Zhang ]
+  * qcacld-2.0: Add channel switch notification for STA
+  * qcacld-2.0: Flush beacon template after country code changes
+  * qcacld-2.0: Check connected peer number before enable MAC Counter
+  * qcacld-2.0: Add smart antenna APIs
+
+  [ hqu ]
+  * qcacld-2.0: Fix possible buffer overflow in wma_stats_ext_req
+  * qcacld-2.0: Add check for bss_list size in wma_group_num_bss_to_scan_id
+  * qcacld-2.0: Fix possible OOB in limProcessAssocReqFrame
+
+  [ Lihua Liu ]
+  * qcacld-2.0: Add sanity check for number of MPDU
+  * qcacld-2.0: Support non atomic skb allocation
+  * qcacld-2.0: Add macro to Enable/Disable Perf features
+  * qcacld-2.0: Add support for customized firmware path
+
+  [ Animesh Kishore ]
+  * mdss: mdp3: Flush fences on dma stop
+  * mdss: mdp: Fix fudge factor overflow check
+  * msm: mdss: Signal pending release fences on blank
+  * mdss: mdp3: Tag fence name with seqno
+  * mdss: mdp3: Optimize power save in lp mode
+  * fbdev: mdss: Signal pending retire fence
+
+  [ Jhansi Konathala ]
+  * SoC: msm: Add global mutex lock to fix the panic issue
+  * ASoC: msm: Initialize global Mutex in audio_cal_utils
+
+  [ Vijayanand Jitta ]
+  * iommu: dma-mapping-fast: Add a check for count in fast_smmu_alloc
+  * iommu: iommu-debug: don't pass null character to copy_to_user
+
+  [ Marc Zyngier ]
+  * arm64: Move BP hardening to check_and_switch_context
+
+  [ Anirudh Ghayal ]
+  * power: qpnp-fg-gen3: Add a DT property to disable ESR PULL_DN
+  * power: qpnp-fg-gen3: Configure ESR timer at shutdown
+  * power: qpnp-fg-gen3: Configure sync-sleep threshold
+  * ARM: dts: msm: Update the ESR and sync-sleep config for 8909w+PM660
+  * ARM: dts: msm: Disable APC CPR at cold for 9x07
+
+  [ Praveen Kurapati ]
+  * msm: ipa: Fix to validate the buffer size
+
+  [ Puneet Yatnal ]
+  * driver: iio: imu: Fix the initial values of gyro high for asm330
+  * drivers: input: sensors: fix smi130 gyro initial values are high
+  * drivers: iio: imu: increased the ASM buffer size
+  * drivers: iio: imu: Fix NULL pointer dereference in bmi160 driver
+
+  [ Dikshita Agarwal ]
+  * msm: vidc: ensure codec count is in supported session range
+
+  [ Chaoli Zhou ]
+  * qcacld-2.0: Reserve some netlink messageID to customer for customization
+  * qcacld-2.0: Update the channel 173 information for IN
+  * qcacld-2.0: Support country code & regdomain map for MM
+  * qcacld-2.0: Update regulatory information
+  * mdm: Update frequence & Tx power in the regulatory database
+  * ARM: dts: mdm: Enable dynamic address for wlan ramdump
+  * ARM: dts: mdm: Disable dynamic address for wlan ramdump
+
+  [ Jordan Crouse ]
+  * checkpatch: Treat duplicate signatures as a different error class
+
+  [ Manu Gautam ]
+  * usb: ehci-msm-hsic: use work_queue to invoke runtime_pm_allow
+  * usb: gadget: f_mbim: Remove usage of notify_state
+  * usb: gadget: f_mbim: Use notify_req_queued instead of notify_count
+  * usb: gadget: f_mbim: Handle response complete before notify_complete
+
+  [ KNnut ]
+  * fs: sdfat: Fix compilation on Linux >= 4.16
+
+  [ Srinivasarao P ]
+  * iommu/iommu-debug: fix buffer overflows in debugfs read functions
+
+  [ Rajeev Kumar Sirasanagandla ]
+  * msm: wlan: Update ETSI1 and ETSI13 countries
+
+  [ Meera Gande ]
+  * msm: camera: isp: Fix invalid type conversion
+
+  [ Florian Westphal ]
+  * netfilter: x_tables: set module owner for icmp(6) matches
+  * netfilter: conntrack: dccp: treat SYNC/SYNCACK as invalid if no prior state
+  * netfilter: x_tables: kill check_entry helper
+
+  [ Noctis Ackerman ]
+  * fs: sdfat: Fix frag_ratio formula
+
+  [ derfelot ]
+  * fs: sdfat: Update to version 2.0.8
+  * Revert "fs: sdfat: Update to version 2.0.8"
+  * fs: sdfat: Update to version 2.0.8
+  * fs: sdfat: Update to version 2.1.8
+
+  [ Kaustubh Pandey ]
+  * net: core: null pointer derefernce in sockev_client_cb
+  * net: memset smsg to avoid the padding data
+  * defconfig: 8909: enable CONFIG_NETFILTER_XT_TARGET_TEE for iwlan scenarios
+
+  [ Jingxiang Ge ]
+  * qcacld-2.0: Fix possible integer underflow in cfg80211_rx_mgmt
+  * qcacld-2.0: Skip IE which has length less than the minimum valid IE length
+  * qcacld-2.0: Fix potential out of bound issue
+  * qcacld-2.0: Fix buffer overwrite problem in GETIBSSPEERINFO
+
+  [ Daniel Rosenberg ]
+  * ANDROID: sdcardfs: Check stacked filesystem depth
+  * staging: android: ion: check for kref overflow
+  * ANDROID: sdcardfs: Don't use OVERRIDE_CRED macro
+  * ANDROID: sdcardfs: Change current->fs under lock
+
+  [ Adrian Salido ]
+  * msm: mdss: save state of vsync handler
+
+  [ Tharun Kumar Merugu ]
+  * msm: ADSPRPC: Handle map and unmap in 32 bit images
+  * msm: adsprpc: allocate all remote memory in kernel
+
+  [ Haibin Liu ]
+  * msm: camera: Fix arbitrary kernel write
+  * msm: camera: Fix out of bound read access
+
+  [ Visweswara Tanuku ]
+  * qcacld-2.0: CL 4509300 - Update fw common interface files
+  * qcacld-2.0: CL 4519030 - Update fw common interface files
+  * qcacld-2.0: CL 4625060 - Update fw common interface files
+  * qcacld-2.0: CL 4647496 - Update fw common interface files
+  * qcacld-2.0: CL 4662126 - Update fw common interface files
+  * qcacld-2.0: CL 4669157 - Update fw common interface files
+  * qcacld-2.0: CL 4677643 - Update fw common interface files
+  * qcacld-2.0: CL 4687827 - Update fw common interface files
+  * qcacld-2.0: CL 4703725 - Update fw common interface files
+  * qcacld-2.0: CL 4704839 - Update fw common interface files
+  * qcacld-2.0: CL 4712573 - Update fw common interface files
+  * qcacld-2.0: CL 4729571 - Update fw common interface files
+  * qcacld-2.0: CL 4798258 - Update fw common interface files
+  * qcacld-2.0: CL 4805563 - Update fw common interface files
+  * qcacld-2.0: CL 4806347 - Update fw common interface files
+  * qcacld-2.0: CL 4811569 - Update fw common interface files
+  * qcacld-2.0: CL 4822672 - Update fw common interface files
+  * qcacld-2.0: CL 4827718 - Update fw common interface files
+  * qcacld-2.0: CL 4867158 - Update fw common interface files
+  * qcacld-2.0: CL 4901851 - Update fw common interface files
+  * qcacld-2.0: CL 4920552 - Update fw common interface files
+  * qcacld-2.0: CL 4943781 - Update fw common interface files
+  * qcacld-2.0: CL 4962465 - Update fw common interface files
+  * qcacld-2.0: CL 4980596 - Update fw common interface files
+  * qcacld-2.0: CL 5005314 - Update fw common interface files
+  * qcacld-2.0: CL 5011639 - Update fw common interface files
+  * qcacld-2.0: CL 5019516 - Update fw common interface files
+  * qcacld-2.0: CL 5038197 - Update fw common interface files
+  * qcacld-2.0: CL 5055458 - Update fw common interface files
+  * qcacld-2.0: CL 5080653 - Update fw common interface files
+  * qcacld-2.0: CL 5087294 - Update fw common interface files
+  * qcacld-2.0: CL 5157294 - Update fw common interface files
+  * qcacld-2.0: CL 5169767 - Update fw common interface files
+  * qcacld-2.0: CL 5188984 - Update fw common interface files
+  * qcacld-2.0: Send thermal events for userbased FW throttling
+  * qcacld-2.0: Return error for invalid wow pattern
+  * qcacld-2.0: CL 5207277 - Update fw common interface files
+  * qcacld-2.0: CL 5216147 - Update fw common interface files
+  * qcacld-2.0: CL 5256109 - Update fw common interface files
+  * qcacld-2.0: CL 5253203 - Update fw common interface files
+  * qcacld-2.0: CL 5273786 - Update fw common interface files
+  * qcacld-2.0: CL 5278496 - Update fw common interface files
+  * qcacld-2.0: CL 5282449 - Update fw common interface files
+  * qcacld-2.0: CL 5310843 - Update fw common interface files
+  * qcacld-2.0: CL 5330078 - Update fw common interface files
+  * qcacld-2.0: CL 5389981 - Update fw common interface files
+  * qcacld-2.0: CL 5392072 - Update fw common interface files
+  * qcacld-2.0: CL 5396771 - Update fw common interface files
+  * qcacld-2.0: CL 5408272 - Update fw common interface files
+  * qcacld-2.0: CL 5433189 - Update fw common interface files
+  * qcacld-2.0: CL 5441245 - Update fw common interface files
+  * qcacld-2.0: CL 5449242 - Update fw common interface files
+  * qcacld-2.0: CL 5471710 - Update fw common interface files
+  * qcacld-2.0: CL 5538220 - Update fw common interface files
+  * qcacld-2.0: HL: Obtain CFR data via HTT and send to user
+  * qcacld-2.0: Provide iwpriv support to configure HPCS Params
+  * qcacld-2.0: Allow one shot CFR request via netlink
+  * qcacld-2.0: CL 5955889 - Update fw common interface files
+  * qcacld-2.0: CL 5987499 - Update fw common interface files
+  * qcacld-2.0: Add HPCS Module Ids
+  * qcacld-2.0: Add HPCS module debug string
+
+  [ Deepak Kumar ]
+  * msm: kgsl: Correctly limit max number of contexts per process
+
+  [ Arun Kumar Neelakantam ]
+  * soc: qcom: bam_dmux: Add SPS_BAM_OPT_IRQ_NO_SUSPEND Flag
+
+  [ Jayaprakash ]
+  * msm: mdss: Fix Null Pointer Dereference in unmap error case
+
+  [ Abhishek Abbanaveni ]
+  * msm: camera: Fix for OOB security CR
+
+  [ puneet ]
+  * Merge remote-tracking branch 'origin/caf/ps-qaes-driver/master' into msm-3.18
+  * driver: iio: imu: fix temperature issue of iam20680
+  * Merge remote-tracking branch 'origin/caf/ps-qaes-driver/master' into msm-3.18
+  * drivers: input: sensors: enabled SMI130 driver compilation
+  * ARCH: arm: defconfig: Enable SMI130 driver config for MDM9x07
+  * drivers: iio: imu: Enabled batching support for iam20680
+  * driver: iio: imu:  SMI130 early buffer implemented
+  * ARCH: arm: defconfig: Enable early buffer for diff sensors
+  * drivers: iio: imu: fixed asm330 early buff bugs
+  * drivers: input: sensors: fix latency issue with smi130 irq handler
+  * drivers: iio: imu: avoid writing sysfs while buffering
+  * drivers: iio: imu: Fixed minor bugs of IMU sensors
+
+  [ Pradeep P V K ]
+  * mtd: msm_qpic_nand: An incorrect page memset during ECC errors
+
+  [ Devi Sandeep Endluri V V ]
+  * defconfig: msm8937: Enable VTI config for v4 and v6
+  * defconfig: msm8998: Enable GCM crypto configs
+  * defconfig: msm8937: Enable GCM crypto configs
+  * defconfig: msm8937: Enable GCM crypto configs
+  * defconfig: msm8909: Enable GCM crypto configs
+  * defconfig: msm8909: Enable VTI config for v4 and v6
+  * defconfig: msm8909-perf: Enable MODULE_SIG_SHA512
+  * defconfig: msm8996: Enable GCM crypto configs
+
+  [ Frank Liu ]
+  * qcacld-2.0: Restore the correct credit for EP
+
+  [ Yu Wang ]
+  * qcacld-2.0: add processing for SSR failure
+  * qcacld-2.0: correct some condition flags in PCIe HIF
+  * qcacld-2.0: check the data length when downloading firmware
+
+  [ Rongjing Liao ]
+  * qcacld-2.0: enable MCC SAP+P2P client concurrency mode
+  * qcacld-2.0: fix compile errors
+  * qcacld-2.0: Fix OOB read in scan_id get
+  * qcacld-2.0: fix KW issue about NULL pointer dereference
+
+  [ Chinmay Agarwal ]
+  * defconfig: msm8937: Enable missing network options
+  * defconfig: msm8909: Enable missing network options
+  * Revert "defconfig: msm8909: Enable missing network options"
+
+  [ Lin Bai ]
+  * qcacld-2.0: Check channel_count in DCC_GET_STATS command
+  * qcacld-2.0: Add warm reset support for USB solution
+
+  [ Sean Tranchetti ]
+  * xfrm: validate template mode
+  * af_key: unconditionally clone on broadcast
+
+  [ Skylar Chang ]
+  * msm: ipa: fix the ipa-hw rules not clean
+  * msm:ipa3: fix the header table gap issue
+  * msm: ipa3: send usb-connect from rndis-ipa
+
+  [ Ritesh Harjani ]
+  * sdcardfs: Fix the format prints in sdcardfs
+  * Revert "dm: use bioset_create_nobvec()"
+  * dm-req-crypt: Add support for immutable bio_vec
+  * dm-req-crypt: Remove discard support as it keep reporting errors
+  * Revert "dm: remove nr_iovecs parameter from alloc_tio()"
+  * Revert "block: use bio_clone_fast() in blk_rq_prep_clone()"
+
+  [ gaurank kathpalia ]
+  * qcacld-2.0: Fix OOB read in limProcessDeauthFrame
+
+  [ Paul Zhang ]
+  * qcacld-2.0: Increase size of MAX_WPA_RSN_IE_LEN in wlan_hdd_cfg80211_set_ie
+  * qcacld-2.0: Dereference adapter after successful validation
+  * qcacld-2.0: Add data validation for avoid frequency command
+
+  [ Mohammed Javid ]
+  * msm: ipa: Error prints are misleading fix it
+  * msm: ipa: Setting appropriate config on MHI ep
+  * msm: ipa: Add WLAN FW SSR event
+  * msm: ipa: Validate routing rule id
+  * msm:ipa: Prevent NAT table deletion only if public ip is not assigned
+  * msm: ipa3: Add mutex to prevent race condition
+  * msm: ipa: Release wlan cons resource
+  * msm: ipa: Protect ipa default routing table
+  * msm:ipa:Prevent rt rule deletion if rt rule id is invalid
+  * msm: ipa3: Fix to validate the user inputs
+
+  [ AnilKumar Chimata ]
+  * defconfig: Enable rng driver for msm8909
+  * defconfig: Remove FIPS flag from config
+
+  [ Ramandeep Trehan ]
+  * defconfig: msm8909: Enable config flags for req-crypt
+
+  [ Pragaspathi Thilagaraj ]
+  * qcacld-2.0: Check for following radio link stats events
+  * qcacld-2.0: Check for following radio link stats events
+
+  [ Swetha Chikkaboraiah ]
+  * ARM: dts: msm: update dload type imem offset for MSM8917/37/53/96
+
+  [ Yingying Tang ]
+  * qcacld-2.0: Add cfg80211_wowlan info when initialize wiphy
+  * qcacld-2.0: Reduce stack consumption to avoid stack overflow
+  * qcacld-2.0: Handle TCP TX throttling new logic when kernel > 3.19
+
+  [ Subbaraman Narayanamurthy ]
+  * power: qpnp-fg-gen3: Use disable_irq_nosync for disabling interrupts
+  * power: fg-util: Wait for soc_update completion upon timeout
+  * power: qpnp-fg-gen3: adjust ki coefficient for full soc dynamically
+
+  [ Indrasena Reddy G ]
+  * soc: qcom: print BG version in log.
+
+  [ Todd Kjos ]
+  * binder: fix proc->files use-after-free
+
+  [ Martijn Coenen ]
+  * UPSTREAM: Revert "FROMLIST: binder: fix proc->files use-after-free"
+
+  [ Dinesh K Garg ]
+  * msm: mink: Convert Smcinvoke to platform driver
+  * ARM: dts: msm: Add smcinvoke node for mdm9607
+  * msm: mink: Add support of clock management for crypto ops
+  * ARM: dts: msm: Add support of clock mgmt for MDM9607
+  * msm: mink: keep clocks enabled for duration of invoke call
+  * msm: mink: Fix clock refcounting
+
+  [ nakul kachhwaha ]
+  * qcacld-2.0: Release reference of peer after copy cfr data
+
+  [ Amit Kushwaha ]
+  * msm: kgsl: create sysfs entries to expose memory usage
+
+  [ Vipin Deep Kaur ]
+  * i2c-msm-v2: Handle Null pointer de-reference
+
+  [ Amine Najahi ]
+  * msm: mdss: sanitize debugfs inputs when reading mdp memory
+
+  [ Tanya Dixit ]
+  * rtac: Add mutex lock to ensure proper fops access
+
+  [ Pradosh Das ]
+  * Revert "net : update enum entry for netlink_sockev."
+  * Revert "net : update enum entry for netlink_sockev."
+
+  [ Zhen Kong ]
+  * qseecom: fix kclient free issue in qseecom_remove
+
+  [ Sanjay Dwivedi ]
+  * ARM: dts: mdm: Add qseecom support_bus_scaling in mdm9x07 target
+
+  [ Will Deacon ]
+  * arm64/vdso: Fix nsec handling for CLOCK_MONOTONIC_RAW
+  * arm64/vdso: Fix nsec handling for CLOCK_MONOTONIC_RAW
+
+  [ Naitik Bharadiya ]
+  * defconfig: Enable CONFIG_SCHED_DEBUG for perf_defconfig
+  * defconfig: Enable CONFIG_SCHED_DEBUG for perf_defconfig
+
+  [ Krzysztof Opasiak ]
+  * usb: gadget: f_hid: fix: Prevent accessing released memory
+
+  [ Felipe F. Tonello ]
+  * usb: gadget: define free_ep_req as universal function
+
+  [ Anurag Chouhan ]
+  * wcnss: Fix buffer overflow in wcnss_prealloc_get
+
+  [ Abhinav Kumar ]
+  * qcacld-2.0: Update last_scan_reject_timestamp with proper value
+
+  [ Arjun Singh ]
+  * soc: qcom: bgcom: allocate a fixed buffer to avoid allocation delay
+  * soc: qcom: bgcom: wait for spi to be free
+  * soc: qcom: bgcom: free the allocated resources on device shutdown
+  * soc: qcom: bgrsb: provide synchronization between enable/disable rsb
+  * soc: qcom: bgcom: disable/enable interrupt on device suspend/resume
+  * soc: qcom: bgcom: adds info log for memory allocation faliure
+
+  [ Christoph Hellwig ]
+  * PCI: Prevent sysfs disable of device while driver is attached
+  * aio: hold an extra file reference over AIO read/write operations
+
+  [ raghavendra ambadas ]
+  * fbdev: msm: Fix unintialisation of variables
+  * msm: mdss: try recovering from PP timeout without panic
+
+  [ c-debabr ]
+  * Release 4.0.11.213X
+
+  [ Zhenhua Huang ]
+  * soc: qcom: secure_buffer: Fix the parameter passing to dmac_flush_range
+
+  [ Arunk Khandavalli ]
+  * nl80211: nl80211_update_ft_ies to validate NL80211_ATTR_IE
+
+  [ Sriharsha Allenki ]
+  * usb: dwc3: Prevent runtime_suspend after wakeup event
+
+  [ Andrey Konovalov ]
+  * USB: core: only clean up what we allocated
+
+  [ Nageswara Reddy Karnati ]
+  * Merge android-3.18.119 (0462616) into msm-3.18
+  * Merge android-3.18.120 (78291159) into msm-3.18
+
+  [ Jinwei Chen ]
+  * qcacld-2.0: change IPA dump log module and enable softIRQ threshold
+
+  [ Dundi Raviteja ]
+  * qcacld-2.0: OOB access may occur due to total numChannels exceeds max value
+  * qcacld-2.0: Possible kernel info leak in sme_updateP2pIe()
+  * qcacld-2.0: Send valid STA ID to FW while processing get stats
+  * qcacld-2.0: Add aggregate stats support for SAP
+  * qcacld-2.0: Handle error cases cleanly, during wlan loading
+
+  [ Akhil P Oommen ]
+  * msm: kgsl: Replace scm call api with its atomic version
+
+  [ Ch Ganesh Kumar ]
+  * msm: mdss: Fix Gamma LUT bounds condition
+
+  [ Jiachao Wu ]
+  * qcacld-2.0: Check NULL pointer
+
+  [ Tang Yingying ]
+  * qcacld-2.0: Add support for Quartz and Naples coex
+
+  [ Krishna Manikandan ]
+  * msm: mdss: Use TPG to handle null commit
+
+  [ Sunil Khatri ]
+  * msm: kgsl: Fix the missing IBs from the snapshot
+  * msm: kgsl: Add a property to find alignment of secure buffers
+  * msm: kgsl: Add a property to find if secure context is supported
+
+  [ Bosch Sensortec ]
+  * Finalized disclaimer information.
+  * Updated directory structure
+  * Changed chipID
+  * added new base source files
+  * Fixed bmi160 compile conflicts
+
+  [ Kai Liu ]
+  * qcacld-2.0: Add mutex to keep wmi sent serialized
+  * qcacld-2.0: Init wmi send mutex
+  * qcacld-2.0: remove mutex in wmi send
+
+  [ Puneet yatnala ]
+  * ARM: dts: msm: sensor interrupt gpio name changed for MDM9607
+  * driver: iio: imu: asm330 early buffer implemented
+
+  [ Santhosh Kumar Thimmanna Bhattar ]
+  * Revert "msm: cpp: Reduce CPP timeout in case of hardware delay"
+  * Revert "msm: cpp: Reduce CPP timeout in case of hardware delay"
+
+  [ Hong Shi ]
+  * qcacld-2.0: Fix race condition between kickout and disconnect
+
+  [ Greg Kroah-Hartman ]
+  * Fix backport of "tcp: detect malicious patterns in tcp_collapse_ofo_queue()"
+  * Linux 3.18.117
+  * Merge 3.18.116 into android-3.18
+  * Merge 3.18.117 into android-3.18
+  * Linux 3.18.118
+  * Merge 3.18.118 into android-3.18
+  * Linux 3.18.119
+  * Merge 3.18.119 into android-3.18
+  * Linux 3.18.120
+  * Merge 3.18.120 into android-3.18
+
+  [ Jann Horn ]
+  * reiserfs: fix broken xattr handling (heap corruption, bad retval)
+
+  [ Lukas Wunner ]
+  * PCI: hotplug: Don't leak pci_slot on registration failure
+
+  [ Willem de Bruijn ]
+  * packet: refine ring v3 block size test to hold one frame
+
+  [ Eric Dumazet ]
+  * tcp: avoid collapses in tcp_prune_queue() if possible
+  * tcp: detect malicious patterns in tcp_collapse_ofo_queue()
+  * tcp: avoid collapses in tcp_prune_queue() if possible
+  * tcp: detect malicious patterns in tcp_collapse_ofo_queue()
+  * tcp: do not force quickack when receiving out-of-order packets
+  * tcp: add max_quickacks param to tcp_incr_quickack and tcp_enter_quickack_mode
+  * tcp: do not aggressively quick ack after ECN events
+  * tcp: add one more quick ack after after ECN events
+  * inet: frag: enforce memory limits earlier
+  * netfilter: ipv6: nf_defrag: reduce struct net memory waste
+  * xfrm_user: prevent leaking 2 bytes of kernel memory
+
+  [ Randy Dunlap ]
+  * kbuild: verify that $DEPMOD is installed
+  * tcp: identify cryptic messages as TCP seq # bugs
+
+  [ Stefan Wahren ]
+  * net: qca_spi: Avoid packet drop during initial sync
+  * net: qca_spi: Make sure the QCA7000 reset is triggered
+
+  [ David Lechner ]
+  * net: usb: rtl8150: demote allmulti message to dev_dbg()
+
+  [ Dan Carpenter ]
+  * scsi: megaraid: silence a static checker bug
+  * dmaengine: k3dma: Off by one in k3_of_dma_simple_xlate()
+  * qlogic: check kstrtoul() for errors
+
+  [ Alexander Duyck ]
+  * ixgbe: Be more careful when modifying MAC filters
+
+  [ Adam Ford ]
+  * ARM: dts: am3517.dtsi: Disable reference to OMAP3 OTG controller
+
+  [ Russell King ]
+  * drm/armada: fix colorkey mode property
+
+  [ Daniel Mack ]
+  * ARM: dts: am437x: make edt-ft5x06 a wakeup source
+  * ARM: pxa: irq: fix handling of ICMR registers in suspend/resume
+
+  [ Yuiko Oshino ]
+  * smsc75xx: Add workaround for gigabit link up hardware errata.
+
+  [ Mathieu Malaterre ]
+  * mm/slub.c: add __printf verification to slab_err()
+  * powerpc/32: Add a missing include header
+  * powerpc/chrp/time: Make some functions static, add missing header include
+  * powerpc/powermac: Add missing prototype for note_bootable_part()
+  * powerpc/powermac: Mark variable x as unused
+  * tracing: Use __printf markup to silence compiler
+
+  [ Fabio Estevam ]
+  * ARM: imx_v4_v5_defconfig: Select ULPI support
+
+  [ Greg Ungerer ]
+  * m68k: fix "bad page state" oops on ColdFire boot
+
+  [ Sudarsana Reddy Kalluru ]
+  * bnx2x: Fix receiving tx-timeout in error or recovery state.
+
+  [ Marek Szyprowski ]
+  * drm/exynos: gsc: Fix support for NV16/61, YUV420/YVU420 and YUV422 modes
+
+  [ BingJing Chang ]
+  * md/raid10: fix that replacement cannot complete recovery after reassemble
+
+  [ Keerthy ]
+  * ARM: dts: da850: Fix interrups property for gpio
+
+  [ Sandipan Das ]
+  * perf report powerpc: Fix crash if callchain is empty
+
+  [ Michael Trimarchi ]
+  * brcmfmac: stop watchdog before detach and free everything
+
+  [ Ganesh Goudar ]
+  * cxgb4: when disabling dcb set txq dcb priority to 0
+
+  [ Casey Schaufler ]
+  * Smack: Mark inode instant in smack_task_to_inode
+
+  [ Hangbin Liu ]
+  * net_sched: Fix missing res info when create new tc_index filter
+  * net_sched: fix NULL pointer dereference when delete tcindex filter
+  * ipv6: mcast: fix unsolicited report interval after receiving querys
+
+  [ Steven Rostedt (VMware) ]
+  * tracing: Fix double free of event_trigger_data
+  * tracing: Fix possible double free in event_enable_trigger_func()
+  * tracing: Quiet gcc warning about maybe unused link variable
+  * locking/lockdep: Do not record IRQ state within lockdep code
+
+  [ Bartosz Golaszewski ]
+  * net: davinci_emac: match the mdio device against its compatible if possible
+
+  [ Li RongQing ]
+  * net: propagate dev_get_valid_name return code
+
+  [ Stefan Agner ]
+  * net: hamradio: use eth_broadcast_addr
+
+  [ Govindarajulu Varadarajan ]
+  * enic: initialize enic->rfs_h.lock in enic_probe
+
+  [ Zhizhou Zhang ]
+  * arm64: make secondary_start_kernel() notrace
+
+  [ Chunfeng Yun ]
+  * usb: gadget: composite: fix delayed_status race condition when set_interface
+
+  [ William Wu ]
+  * usb: dwc2: fix isoc split in transfer with no data
+
+  [ Fathi Boudra ]
+  * selftests: sync: add config fragment for testing sync framework
+
+  [ Kees Cook ]
+  * isdn: Disable IIOCDBGVAR
+
+  [ Sudip Mukherjee ]
+  * Bluetooth: avoid killing an already killed socket
+
+  [ Chen Hu ]
+  * serial: 8250_dw: always set baud rate in dw8250_set_termios
+
+  [ John Ogness ]
+  * USB: serial: sierra: fix potential deadlock at close
+
+  [ Takashi Iwai ]
+  * ALSA: rawmidi: Change resized buffers atomically
+  * ALSA: emu10k1: Rate-limit error messages about page errors
+  * ALSA: usb-audio: Apply rate limit to warning messages in URB complete callback
+  * ALSA: vx222: Fix invalid endian conversions
+  * ALSA: virmidi: Fix too long output trigger loop
+  * ALSA: cs5535audio: Fix invalid endian conversion
+  * ALSA: memalloc: Don't exceed over the requested size
+  * ALSA: vxpocket: Fix invalid endian conversions
+
+  [ Cong Wang ]
+  * infiniband: fix a possible use-after-free bug
+  * llc: use refcount_inc_not_zero() for llc_sap_find()
+  * vsock: split dwork to avoid reinitializations
+
+  [ Alexey Kodanev ]
+  * dccp: fix undefined behavior with 'cwnd' shift in ccid2_cwnd_restart()
+
+  [ Srinivas Ramana ]
+  * pinctrl: qcom: Clear status bit on irq_unmask
+  * pinctrl: qcom: Clear status bit on irq_unmask
+
+  [ Liangwei Dong ]
+  * qcacld-2.0: Reject non-RSN/WPA Assoc request
+  * qcacld-2.0: Change RSNOpaque Min len to 2
+
+  [ Suprith Malligere Shankaregowda ]
+  * msm: ais: Handling bigger value than upper bound in msm_cpp_irq api
+
+  [ jitiphil ]
+  * qcacld-2.0: Integer overflow in wma_unified_link_peer_stats_event_handler
+
+  [ Mao Jinlong ]
+  * Revert "rtc: alarm: Add power-on alarm feature"
+
+  [ Deepak Shankar ]
+  * msm: ais: Fix out-of-bounds read in string class name
+
+  [ Shantanu Jain ]
+  * ARM: dts: msm: add synaptics touch firmware for wearables
+
+  [ Eric Biggers ]
+  * crypto: pcrypt - fix freeing pcrypt instances
+  * crypto: vmac - require a block cipher with 128-bit block size
+  * crypto: vmac - separate tfm and request context
+  * crypto: blkcipher - fix crash flushing dcache in error path
+  * crypto: ablkcipher - fix crash flushing dcache in error path
+
+  [ Liwei Song ]
+  * i2c: ismt: fix wrong device address when unmap the data buffer
+
+  [ Andrey Ryabinin ]
+  * mm: slub: fix format mismatches in slab_err() callers
+
+  [ Erick Reyes ]
+  * ALSA: info: Check for integer overflow in snd_info_entry_write()
+
+  [ Masami Hiramatsu ]
+  * ring_buffer: tracing: Inherit the tracing setting to next ring buffer
+  * kprobes/x86: Fix %p uses in error messages
+
+  [ Oleksij Rempel ]
+  * ARM: dts: imx6sx: fix irq for pcie bridge
+
+  [ Al Viro ]
+  * root dentries need RCU-delayed freeing
+  * fix mntput/mntput race
+  * fix __legitimize_mnt()/mntput() race
+
+  [ Juergen Gross ]
+  * xen/netfront: don't cache skb_shinfo()
+
+  [ Yeshwanth Sriram Guntuka ]
+  * qcacld-2.0: Save processed AUTH frames seq number in pe_session
+  * qcacld-2.0: Drop same seq num auth frame only if retry bit is set
+  * qcacld-2.0: Possible buffer overflow in wma_stats_ext_event_handler
+
+  [ Dhanalakshmi Siddani ]
+  * ASoC: msm: Add new dai links for compress capture for apq8009
+  * ASoC: msm: add new dai link for compress capture for apq8009
+  * ASoC: msm: qdsp6v2: add routing controls to support compress capture
+
+  [ Ashay Jaiswal ]
+  * power: smb2: expose CHARGE_FULL/CYCLE_COUNT properties
+
+  [ Neeraj Upadhyay ]
+  * arch: arm64: Reenable HW breakpoint
+
+  [ Mark Rutland ]
+  * BACKPORT: arm64: split thread_info from task stack
+
+  [ Shankara Pailoor ]
+  * jfs: Fix inconsistency between memory allocation and ea_buf->max_size
+
+  [ Anil Gurumurthy ]
+  * scsi: qla2xxx: Return error when TMF returns
+
+  [ Quinn Tran ]
+  * scsi: qla2xxx: Fix ISP recovery on unload
+
+  [ Tony Battersby ]
+  * scsi: sg: fix minor memory leak in error path
+
+  [ Herbert Xu ]
+  * crypto: padlock-aes - Fix Nano workaround data corruption
+
+  [ Jiang Biao ]
+  * virtio_balloon: fix another race between migration and ballooning
+
+  [ Anton Vasilyev ]
+  * can: ems_usb: Fix memory leak on ems_usb_disconnect()
+
+  [ Linus Torvalds ]
+  * squashfs: be more careful about metadata corruption
+  * squashfs: more metadata hardening
+  * squashfs: more metadata hardenings
+
+  [ Florian Fainelli ]
+  * net: dsa: Do not suspend/resume closed slave_dev
+
+  [ Lorenzo Bianconi ]
+  * ipv4: remove BUG_ON() from fib_compute_spec_dst
+
+  [ Yousuk Seung ]
+  * tcp: refactor tcp_ecn_check_ce to remove sk type cast
+
+  [ Xiao Liang ]
+  * xen-netfront: wait xenbus state change when load module manually
+
+  [ Eugeniy Paltsev ]
+  * NET: stmmac: align DMA stuff to largest cache line length
+
+  [ Theodore Ts'o ]
+  * random: mix rdrand with entropy sent in from userspace
+
+  [ Mauro Carvalho Chehab ]
+  * media: siano: get rid of __le32/__le16 cast warnings
+  * media: si470x: fix __be16 annotations
+
+  [ Suman Anna ]
+  * media: omap3isp: fix unbalanced dma_iommu_mapping
+
+  [ Tudor-Dan Ambarus ]
+  * crypto: authencesn - don't leak pointers to authenc keys
+  * crypto: authenc - don't leak pointers to authenc keys
+
+  [ Dominik Bozek ]
+  * usb: hub: Don't wait for connect state at resume for powered-off ports
+
+  [ Michal Simek ]
+  * microblaze: Fix simpleImage format generation
+
+  [ Siva Rebbagondla ]
+  * rsi: Fix 'invalid vdd' warning in mmc
+
+  [ Chris Novakovic ]
+  * ipconfig: Correctly initialise ic_nameservers
+
+  [ Luc Van Oostenryck ]
+  * drm/radeon: fix mode_valid's return type
+  * drm/gma500: fix psb_intel_lvds_mode_valid()'s return type
+
+  [ Takashi Sakamoto ]
+  * ALSA: hda/ca0132: fix build failure when a local macro is defined
+
+  [ Jakub Kicinski ]
+  * bpf: fix references to free_bpf_prog_info() in comments
+
+  [ Wenwen Wang ]
+  * scsi: 3w-9xxx: fix a missing-check bug
+  * scsi: 3w-xxxx: fix a missing-check bug
+
+  [ Thomas Richter ]
+  * s390/cpum_sf: Add data entry sizes to sampling trailer entry
+  * perf: fix invalid bit in diagnostic entry
+
+  [ Brad Love ]
+  * media: saa7164: Fix driver name in debug output
+
+  [ Damien Le Moal ]
+  * libata: Fix command retry decision
+
+  [ DaeRyong Jeong ]
+  * tty: Fix data race in tty_insert_flip_string_fixed_flag
+
+  [ Dmitry Torokhov ]
+  * HID: i2c-hid: check if device is there before really probing
+
+  [ Jonathan Neuschäfer ]
+  * powerpc/embedded6xx/hlwd-pic: Prevent interrupts from being handled by Starlet
+
+  [ Colin Ian King ]
+  * media: smiapp: fix timeout checking in smiapp_read_nvm
+
+  [ Yufen Yu ]
+  * md: fix NULL dereference of mddev->pers in remove_and_add_spares()
+
+  [ Anson Huang ]
+  * regulator: pfuze100: add .is_enable() for pfuze100_swb_regulator_ops
+
+  [ Maya Erez ]
+  * scsi: ufs: fix exception event handling
+
+  [ Mika Westerberg ]
+  * PCI: pciehp: Request control of native hotplug only if supported
+
+  [ Christophe Leroy ]
+  * powerpc/8xx: fix invalid register expression in head_8xx.S
+
+  [ Sven Eckelmann ]
+  * ath: Add regulatory mapping for FCC3_ETSIC
+  * ath: Add regulatory mapping for ETSI8_WORLD
+  * ath: Add regulatory mapping for APL13_WORLD
+  * ath: Add regulatory mapping for APL2_FCCA
+  * ath: Add regulatory mapping for Uganda
+  * ath: Add regulatory mapping for Tanzania
+  * ath: Add regulatory mapping for Serbia
+  * ath: Add regulatory mapping for Bermuda
+  * ath: Add regulatory mapping for Bahamas
+
+  [ Eyal Reizer ]
+  * wlcore: sdio: check for valid platform device data before suspend
+
+  [ Ganapathi Bhat ]
+  * mwifiex: handle race during mwifiex_usb_disconnect
+
+  [ Kai Chieh Chuang ]
+  * ASoC: dpcm: fix BE dai not hw_free and shutdown
+
+  [ Kan Liang ]
+  * perf/x86/intel/uncore: Correct fixed counter index check in generic code
+  * perf/x86/intel/uncore: Correct fixed counter index check for NHM
+
+  [ Shuah Khan (Samsung OSG) ]
+  * usbip: usbip_detach: Fix memory, udev context and udev leak
+
+  [ Leon Romanovsky ]
+  * RDMA/mad: Convert BUG_ONs to error flows
+
+  [ Stewart Smith ]
+  * hvc_opal: don't set tb_ticks_per_usec in udbg_init_opal_common()
+
+  [ Alexandre Belloni ]
+  * rtc: ensure rtc_set_alarm fails when alarms are not supported
+
+  [ Chintan Pandya ]
+  * mm: vmalloc: avoid racy handling of debugobjects in vunmap
+
+  [ Zhouyang Jia ]
+  * ALSA: emu10k1: add error handling for snd_ctl_add
+  * ALSA: fm801: add error handling for snd_ctl_add
+
+  [ Artem Savkov ]
+  * tracing/kprobes: Fix trace_probe flags on enable_trace_kprobe() failure
+
+  [ Vishwanath Raju K ]
+  * ARM: dts: msm: Fix address and size width for common cma node for sdx20
+
+  [ Vijay Viswanath ]
+  * mmc: block: Put card instead of release_host in mmc_ioctl
+
+  [ Paras Nagda ]
+  * msm: vidc: remove redundant init_completion() calls
+
+  [ Siddartha Mohanadoss ]
+  * thermal: qpnp-adc-tm: Fix aborting suspend
+
+  [ Vijay Navnath Kamble ]
+  * ARM: dts: msm: Mount system, vendor from fstab for apq8053 hw platforms
+
+  [ Siva Kumar Akkireddi ]
+  * msm: sps: Suppress bind/unbind attributes
+  * msm: mhi_dev: Switch to look-up table for UCI channel attributes
+  * msm: mhi_dev: Add asynchronous read/write support in UCI driver
+  * msm: mhi_dev: Initialize UCI client channel numbers early
+  * msm: mhi_dev: Handle wrap-around case for event ring updates
+
+  [ Lakshmi Narayana Kalavala ]
+  * drm/msm: Fix the format prints in display driver
+
+  [ Avaneesh Kumar Dwivedi ]
+  * soc: qcom: Query and log Blackghost firmware version
+
+  [ Jaegeuk Kim ]
+  * Merge commit 'f264f5e373eb' into android-3.18
+  * Merge remote-tracking branch 'origin/upstream-f2fs-stable-linux-3.18.y' into android-3.18
+
+  [ Arnd Bergmann ]
+  * ARM: fix put_user() for gcc-8
+  * turn off -Wattribute-alias
+
+  [ Anssi Hannula ]
+  * can: xilinx_can: fix RX loop if RXNEMP is asserted without RXOK
+  * can: xilinx_can: fix device dropping off bus on RX overrun
+  * can: xilinx_can: keep only 1-2 frames in TX FIFO to fix TX accounting
+  * can: xilinx_can: fix RX overflow interrupt not being enabled
+
+  [ Jerry Zhang ]
+  * usb: gadget: f_fs: Only return delayed status when len is 0
+
+  [ Bin Liu ]
+  * usb: core: handle hub C_PORT_OVER_CURRENT condition
+
+  [ Lubomir Rintel ]
+  * usb: cdc_acm: Add quirk for Castles VEGA3000
+
+  [ Yuchung Cheng ]
+  * tcp: fix dctcp delayed ACK schedule
+  * tcp: helpers to send special DCTCP ack
+  * tcp: do not cancel delay-AcK on DCTCP special ACK
+  * tcp: do not delay ACK in DCTCP upon CE status change
+
+  [ Roopa Prabhu ]
+  * rtnetlink: add rtnl_link_state check in rtnl_configure_link
+
+  [ Jack Morgenstein ]
+  * net/mlx4_core: Save the qpn from the input modifier in RST2INIT wrapper
+
+  [ Paolo Abeni ]
+  * ip: hash fragments consistently
+
+  [ Stefano Brivio ]
+  * net: Don't copy pfmemalloc flag in __copy_skb_header()
+  * skbuff: Unconditionally copy pfmemalloc in __skb_clone()
+
+  [ Gustavo A. R. Silva ]
+  * ptp: fix missing break in switch
+
+  [ Tyler Hicks ]
+  * ipv4: Return EINVAL when ping_group_range sysctl doesn't map to user ns
+
+  [ Vineet Gupta ]
+  * ARC: mm: allow mprotect to make stack mappings executable
+
+  [ Alexey Brodkin ]
+  * ARC: Fix CONFIG_SWAP
+
+  [ OGAWA Hirofumi ]
+  * fat: fix memory allocation failure handling of match_strdup()
+
+  [ Dewet Thibaut ]
+  * x86/MCE: Remove min interval polling limitation
+
+  [ Fei Mao ]
+  * input: touchscreen: synaptics_dsx_2.6: reset device when resume
+
+  [ Alistair Strachan ]
+  * x86_64_cuttlefish_defconfig: enable verity cert
+  * x86_64_cuttlefish_defconfig: Enable android-verity
+
+  [ Manjunatha Madana ]
+  * ARM: dts: Mount system and vendor for msm8909w from fstabs.
+
+  [ Madhukar Sandi ]
+  * ARM: dts: Mount system and vendor from fstab for apq8009
+
+  [ Baochu Xu ]
+  * ARM: dts: move android fstab node to SDW2500 dts
+
+ -- Bardia Moshiri <fakeshell@bardia.tech>  Sat, 04 Mar 2023 07:31:42 -0500
+

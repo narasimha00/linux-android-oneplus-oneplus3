@@ -100,7 +100,7 @@ KERNEL_BOOTIMAGE_VERSION = 0
 # Whether to build a flashable vbmeta.img. Please note that currently
 # only empty vbmeta images (disabling verified boot) can be generated.
 # Use 0 (no) or 1 (default).
-DEVICE_VBMETA_REQUIRED = 1
+DEVICE_VBMETA_REQUIRED = 0
 
 # Samsung devices require a special flag. Enable the following if your
 # device is a Samsung device that requires flag 0 to be present
@@ -112,11 +112,11 @@ DEVICE_VBMETA_IS_SAMSUNG = 0
 ########################################################################
 
 # Whether to enable kernel upgrades on package upgrades. Use 0 (no) or 1.
-FLASH_ENABLED = 1
+FLASH_ENABLED = 0
 
 # If your device is treble-ized, but aonly, you should set the following to
 # 1 (yes).
-FLASH_IS_AONLY = 0
+FLASH_IS_AONLY = 1
 
 # `flash-bootimage` defaults are enough for most recent devices, but legacy
 # devices won't work out of the box.
@@ -125,26 +125,26 @@ FLASH_IS_AONLY = 0
 # on older devices.
 #
 # Do not enable if you don't know what you're doing
-FLASH_IS_LEGACY_DEVICE = 0
+FLASH_IS_LEGACY_DEVICE = 1
 
 # Device manufacturer. This must match the `ro.product.vendor.manufacturer`
 # Android property. If you don't want to specify this, leave it undefined,
 # FLASH_INFO_CPU will be checked instead.
-FLASH_INFO_MANUFACTURER = Vendor
+FLASH_INFO_MANUFACTURER = OnePlus
 
 # Device model. This must match the `ro.product.vendor.model`
 # Android property. If you don't want to specify this, leave it undefined,
 # FLASH_INFO_CPU will be checked instead.
-FLASH_INFO_MODEL = Device1
+FLASH_INFO_MODEL = lineage_oneplus3
 
 # Device CPU. This will be grepped against /proc/cpuinfo to check if
 # we're running on the specific device. Note this is a last-resort
 # method, specifying FLASH_INFO_MANUFACTURER and FLASH_INFO_MODEL is
 # recommended.
-FLASH_INFO_CPU = My Fictional System-on-a-Chip
+FLASH_INFO_CPU = Qualcomm Technologies, Inc MSM8996
 
 # Space-separated list of supported device ids as reported by fastboot
-FLASH_INFO_DEVICE_IDS = model1 model2
+FLASH_INFO_DEVICE_IDS = oneplus3
 
 ########################################################################
 # Kernel build settings
@@ -162,7 +162,7 @@ BUILD_TRIPLET = aarch64-linux-android-
 BUILD_CLANG_TRIPLET = aarch64-linux-gnu-
 
 # The compiler to use. Recent Android kernels are built with clang.
-BUILD_CC = clang
+BUILD_CC = aarch64-linux-android-gcc-4.9
 
 # Extra paths to prepend to the PATH variable. You'll probably want
 # to specify the clang path here (the default).
