@@ -43,12 +43,12 @@ KERNEL_CONFIG_USE_DIFFCONFIG = 0
 KERNEL_DEFCONFIG = lineageos_oneplus3_defconfig
 
 # Whether to include DTBs with the image. Use 0 (no) or 1.
-KERNEL_IMAGE_WITH_DTB = 1
+KERNEL_IMAGE_WITH_DTB = 0
 
 # Path to the DTB
 # If you leave this undefined, an attempt to find it automatically
 # will be made.
-KERNEL_IMAGE_DTB = arch/arm64/boot/dts/qcom/msm8996pro-pmi8996-mtp.dtb arch/arm64/boot/dts/qcom/msm8996-v3-pmi8996-mtp.dtb
+# KERNEL_IMAGE_DTB = arch/arm64/boot/dts/qcom/msm8996pro-pmi8996-mtp.dtb arch/arm64/boot/dts/qcom/msm8996-v3-pmi8996-mtp.dtb
 
 # Whether to include a DTB Overlay. Use 0 (no) or 1.
 KERNEL_IMAGE_WITH_DTB_OVERLAY = 0
@@ -56,7 +56,7 @@ KERNEL_IMAGE_WITH_DTB_OVERLAY = 0
 # Path to the DTB overlay.
 # If you leave this undefined, an attempt to find it automatically
 # will be made.
-#KERNEL_IMAGE_DTB_OVERLAY = arch/arm64/boot/dts/qcom/my_overlay.dtbo
+# KERNEL_IMAGE_DTB_OVERLAY = arch/arm64/boot/dts/qcom/my_overlay.dtbo
 
 # Whether to include the DTB Overlay into the kernel image
 # Use 0 (no, default) or 1.
@@ -144,7 +144,7 @@ FLASH_INFO_MODEL = lineage_oneplus3
 FLASH_INFO_CPU = Qualcomm Technologies, Inc MSM8996
 
 # Space-separated list of supported device ids as reported by fastboot
-FLASH_INFO_DEVICE_IDS = oneplus3
+FLASH_INFO_DEVICE_IDS = oneplus3 oneplus3t
 
 ########################################################################
 # Kernel build settings
@@ -183,4 +183,4 @@ DEB_BUILD_FOR = arm64
 KERNEL_ARCH = arm64
 
 # Kernel target to build
-KERNEL_BUILD_TARGET = Image.gz
+KERNEL_BUILD_TARGET = Image.gz-dtb

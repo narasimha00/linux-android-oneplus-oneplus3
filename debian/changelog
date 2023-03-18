@@ -1,9 +1,10 @@
-linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0) halium-9.0; urgency=medium
+linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git20230304223628.744aa2a.halium.9.0) halium-9.0; urgency=medium
 
   [ Bardia Moshiri ]
   * yylloc multiple definition
   * disable CONFIG_COMPAT_VDSO
   * initial debian packaging
+  * build with gcc 4.9 and set device as legacy
 
   [ Ernes_t ]
   * Merge pull request #1 from Bettehem/Halium_9.0_GSI
@@ -2270,5 +2271,5 @@ linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0) halium-9.0;
   [ Baochu Xu ]
   * ARM: dts: move android fstab node to SDW2500 dts
 
- -- Bardia Moshiri <fakeshell@bardia.tech>  Sat, 04 Mar 2023 07:31:42 -0500
+ -- Bardia Moshiri <fakeshell@bardia.tech>  Sat, 04 Mar 2023 17:36:28 -0500
 
