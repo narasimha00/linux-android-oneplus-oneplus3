@@ -1077,8 +1077,7 @@ static void crypt_dec_pending(struct dm_crypt_io *io)
 	if (io->ctx.req)
 		crypt_free_req(cc, io->ctx.req, base_bio);
 
-	base_bio->bi_error = error;
-	bio_endio(base_bio);
+	bio_endio(base_bio, error);
 }
 
 /*
@@ -1111,7 +1110,6 @@ static void crypt_endio(struct bio *clone)
 	if (rw == WRITE)
 		crypt_free_buffer_pages(cc, clone);
 
-	error = clone->bi_error;
 	bio_put(clone);
 
 	if (rw == READ && !error) {
