@@ -2510,8 +2510,6 @@ void register_console(struct console *newcon)
 	     i < MAX_CMDLINECONSOLES && c->name[0];
 	     i++, c++) {
 		BUILD_BUG_ON(sizeof(c->name) != sizeof(newcon->name));
-		if (strcmp(c->name, newcon->name) != 0)
-			continue;
 		if (newcon->index >= 0 &&
 		    newcon->index != c->index)
 			continue;
