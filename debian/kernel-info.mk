@@ -18,7 +18,7 @@ KERNEL_BOOTIMAGE_CMDLINE = androidboot.hardware=qcom user_debug=31 msm_rtb.filte
 DEVICE_VENDOR = oneplus
 
 # Slug for the device model. Like above.
-DEVICE_MODEL = 3
+DEVICE_MODEL = oneplus3
 
 # Slug for the device platform. If unsure, keep this commented.
 #DEVICE_PLATFORM = platform
@@ -141,7 +141,7 @@ FLASH_INFO_MODEL =
 # we're running on the specific device. Note this is a last-resort
 # method, specifying FLASH_INFO_MANUFACTURER and FLASH_INFO_MODEL is
 # recommended.
-FLASH_INFO_CPU = Qualcomm Technologies, Inc MSM8996pro
+FLASH_INFO_CPU = Qualcomm Technologies, Inc MSM8996
 
 # Space-separated list of supported device ids as reported by fastboot
 FLASH_INFO_DEVICE_IDS = oneplus3 oneplus3t
