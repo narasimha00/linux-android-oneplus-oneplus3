@@ -884,6 +884,7 @@ static long msm_csid_subdev_ioctl(struct v4l2_subdev *sd,
 		break;
 	default:
 		// pr_err_ratelimited("%s: command not found\n", __func__);
+		;
 	}
 	CDBG("%s:%d\n", __func__, __LINE__);
 	mutex_unlock(&csid_dev->mutex);
