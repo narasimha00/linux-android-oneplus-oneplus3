@@ -2425,7 +2425,7 @@ static int wcd9xxx_dt_parse_vreg_info(struct device *dev,
 	regnode = of_parse_phandle(dev->of_node, prop_name, 0);
 
 	if (!regnode) {
-		dev_err(dev, "Looking up %s property in node %s failed",
+		dev_info(dev, "Looking up %s property in node %s failed",
 				prop_name, dev->of_node->full_name);
 		return -ENODEV;
 	}
@@ -2450,7 +2450,7 @@ static int wcd9xxx_dt_parse_vreg_info(struct device *dev,
 
 	ret = of_property_read_u32(dev->of_node, prop_name, &prop_val);
 	if (ret) {
-		dev_err(dev, "Looking up %s property in node %s failed",
+		dev_info(dev, "Looking up %s property in node %s failed",
 				prop_name, dev->of_node->full_name);
 		return -EFAULT;
 	}
@@ -2467,7 +2467,7 @@ static int wcd9xxx_read_of_property_u32(struct device *dev,
 	int ret = 0;
 	ret = of_property_read_u32(dev->of_node, name, val);
 	if (ret)
-		dev_err(dev, "Looking up %s property in node %s failed",
+		dev_info(dev, "Looking up %s property in node %s failed",
 				name, dev->of_node->full_name);
 	return ret;
 }
@@ -2577,14 +2577,14 @@ static int wcd9xxx_dt_parse_slim_interface_dev_info(struct device *dev,
 	ret = of_property_read_string(dev->of_node, "qcom,cdc-slim-ifd",
 				      &slim_ifd->name);
 	if (ret) {
-		dev_err(dev, "Looking up %s property in node %s failed",
+		dev_info(dev, "Looking up %s property in node %s failed",
 			"qcom,cdc-slim-ifd-dev", dev->of_node->full_name);
 		return -ENODEV;
 	}
 	prop = of_find_property(dev->of_node,
 			"qcom,cdc-slim-ifd-elemental-addr", NULL);
 	if (!prop) {
-		dev_err(dev, "Looking up %s property in node %s failed",
+		dev_info(dev, "Looking up %s property in node %s failed",
 			"qcom,cdc-slim-ifd-elemental-addr",
 			dev->of_node->full_name);
 		return -ENODEV;
@@ -2767,7 +2767,7 @@ static struct wcd9xxx_pdata *wcd9xxx_populate_dt_pdata(struct device *dev)
 		pdata->reset_gpio = of_get_named_gpio(dev->of_node,
 				"qcom,cdc-reset-gpio", 0);
 		if (pdata->reset_gpio < 0) {
-			dev_err(dev, "Looking up %s property in node %s failed %d\n",
+			dev_info(dev, "Looking up %s property in node %s failed %d\n",
 				"qcom, cdc-reset-gpio",
 				dev->of_node->full_name, pdata->reset_gpio);
 			goto err;
@@ -2778,7 +2778,7 @@ static struct wcd9xxx_pdata *wcd9xxx_populate_dt_pdata(struct device *dev)
 				   "qcom,cdc-mclk-clk-rate",
 				   &mclk_rate);
 	if (ret) {
-		dev_err(dev, "Looking up %s property in\n"
+		dev_info(dev, "Looking up %s property in\n"
 			"node %s failed",
 			"qcom,cdc-mclk-clk-rate",
 			dev->of_node->full_name);
@@ -2801,7 +2801,7 @@ static struct wcd9xxx_pdata *wcd9xxx_populate_dt_pdata(struct device *dev)
 				"qcom,cdc-dmic-sample-rate",
 				&dmic_sample_rate);
 	if (ret) {
-		dev_err(dev, "Looking up %s property in node %s failed",
+		dev_info(dev, "Looking up %s property in node %s failed",
 			"qcom,cdc-dmic-sample-rate",
 			dev->of_node->full_name);
 		dmic_sample_rate = WCD9XXX_DMIC_SAMPLE_RATE_UNDEFINED;
@@ -2816,7 +2816,7 @@ static struct wcd9xxx_pdata *wcd9xxx_populate_dt_pdata(struct device *dev)
 				"qcom,cdc-mad-dmic-rate",
 				&mad_dmic_sample_rate);
 	if (ret) {
-		dev_err(dev, "Looking up %s property in node %s failed, err = %d",
+		dev_info(dev, "Looking up %s property in node %s failed, err = %d",
 			"qcom,cdc-mad-dmic-rate",
 			dev->of_node->full_name, ret);
 		mad_dmic_sample_rate = WCD9XXX_DMIC_SAMPLE_RATE_UNDEFINED;
@@ -2831,7 +2831,7 @@ static struct wcd9xxx_pdata *wcd9xxx_populate_dt_pdata(struct device *dev)
 				"qcom,cdc-ecpp-dmic-rate",
 				&ecpp_dmic_sample_rate);
 	if (ret) {
-		dev_err(dev, "Looking up %s property in node %s failed, err = %d",
+		dev_info(dev, "Looking up %s property in node %s failed, err = %d",
 			"qcom,cdc-ecpp-dmic-rate",
 			dev->of_node->full_name, ret);
 		ecpp_dmic_sample_rate = WCD9XXX_DMIC_SAMPLE_RATE_UNDEFINED;
@@ -2861,7 +2861,7 @@ static struct wcd9xxx_pdata *wcd9xxx_populate_dt_pdata(struct device *dev)
 				"qcom,cdc-mic-unmute-delay",
 				&mic_unmute_delay);
 	if (ret) {
-		dev_err(dev, "Looking up %s property in node %s failed",
+		dev_info(dev, "Looking up %s property in node %s failed",
 			"qcom,cdc-mic-unmute-delay",
 			dev->of_node->full_name);
 	}

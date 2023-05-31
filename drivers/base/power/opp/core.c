@@ -355,8 +355,8 @@ int dev_pm_opp_get_opp_count(struct device *dev)
 	dev_opp = _find_device_opp(dev);
 	if (IS_ERR(dev_opp)) {
 		count = PTR_ERR(dev_opp);
-		dev_err(dev, "%s: device OPP not found (%d)\n",
-			__func__, count);
+		// dev_err(dev, "%s: device OPP not found (%d)\n",
+		//	__func__, count);
 		goto out_unlock;
 	}
 
@@ -409,7 +409,7 @@ struct dev_pm_opp *dev_pm_opp_find_freq_exact(struct device *dev,
 	dev_opp = _find_device_opp(dev);
 	if (IS_ERR(dev_opp)) {
 		int r = PTR_ERR(dev_opp);
-		dev_err(dev, "%s: device OPP not found (%d)\n", __func__, r);
+		// dev_err(dev, "%s: device OPP not found (%d)\n", __func__, r);
 		return ERR_PTR(r);
 	}
 
@@ -1679,7 +1679,7 @@ static int _opp_set_availability(struct device *dev, unsigned long freq,
 	dev_opp = _find_device_opp(dev);
 	if (IS_ERR(dev_opp)) {
 		r = PTR_ERR(dev_opp);
-		dev_warn(dev, "%s: Device OPP not found (%d)\n", __func__, r);
+		// dev_warn(dev, "%s: Device OPP not found (%d)\n", __func__, r);
 		goto unlock;
 	}
 

@@ -613,7 +613,6 @@ static void skb_release_head_state(struct sk_buff *skb)
 	secpath_put(skb->sp);
 #endif
 	if (skb->destructor) {
-		WARN_ON(in_irq());
 		skb->destructor(skb);
 	}
 #if IS_ENABLED(CONFIG_NF_CONNTRACK)
@@ -1658,8 +1657,6 @@ int skb_copy_bits(const struct sk_buff *skb, int offset, void *to, int len)
 		int end;
 		skb_frag_t *f = &skb_shinfo(skb)->frags[i];
 
-		WARN_ON(start > offset + len);
-
 		end = start + skb_frag_size(f);
 		if ((copy = end - offset) > 0) {
 			u8 *vaddr;
@@ -1683,8 +1680,6 @@ int skb_copy_bits(const struct sk_buff *skb, int offset, void *to, int len)
 
 	skb_walk_frags(skb, frag_iter) {
 		int end;
-
-		WARN_ON(start > offset + len);
 
 		end = start + frag_iter->len;
 		if ((copy = end - offset) > 0) {
@@ -1946,8 +1941,6 @@ int skb_store_bits(struct sk_buff *skb, int offset, const void *from, int len)
 		skb_frag_t *frag = &skb_shinfo(skb)->frags[i];
 		int end;
 
-		WARN_ON(start > offset + len);
-
 		end = start + skb_frag_size(frag);
 		if ((copy = end - offset) > 0) {
 			u8 *vaddr;
@@ -1970,8 +1963,6 @@ int skb_store_bits(struct sk_buff *skb, int offset, const void *from, int len)
 
 	skb_walk_frags(skb, frag_iter) {
 		int end;
-
-		WARN_ON(start > offset + len);
 
 		end = start + frag_iter->len;
 		if ((copy = end - offset) > 0) {
@@ -2019,8 +2010,6 @@ __wsum __skb_checksum(const struct sk_buff *skb, int offset, int len,
 		int end;
 		skb_frag_t *frag = &skb_shinfo(skb)->frags[i];
 
-		WARN_ON(start > offset + len);
-
 		end = start + skb_frag_size(frag);
 		if ((copy = end - offset) > 0) {
 			__wsum csum2;
@@ -2043,8 +2032,6 @@ __wsum __skb_checksum(const struct sk_buff *skb, int offset, int len,
 
 	skb_walk_frags(skb, frag_iter) {
 		int end;
-
-		WARN_ON(start > offset + len);
 
 		end = start + frag_iter->len;
 		if ((copy = end - offset) > 0) {
@@ -2105,8 +2092,6 @@ __wsum skb_copy_and_csum_bits(const struct sk_buff *skb, int offset,
 	for (i = 0; i < skb_shinfo(skb)->nr_frags; i++) {
 		int end;
 
-		WARN_ON(start > offset + len);
-
 		end = start + skb_frag_size(&skb_shinfo(skb)->frags[i]);
 		if ((copy = end - offset) > 0) {
 			__wsum csum2;
@@ -2134,8 +2119,6 @@ __wsum skb_copy_and_csum_bits(const struct sk_buff *skb, int offset,
 	skb_walk_frags(skb, frag_iter) {
 		__wsum csum2;
 		int end;
-
-		WARN_ON(start > offset + len);
 
 		end = start + frag_iter->len;
 		if ((copy = end - offset) > 0) {
@@ -3335,8 +3318,6 @@ __skb_to_sgvec(struct sk_buff *skb, struct scatterlist *sg, int offset, int len,
 	for (i = 0; i < skb_shinfo(skb)->nr_frags; i++) {
 		int end;
 
-		WARN_ON(start > offset + len);
-
 		end = start + skb_frag_size(&skb_shinfo(skb)->frags[i]);
 		if ((copy = end - offset) > 0) {
 			skb_frag_t *frag = &skb_shinfo(skb)->frags[i];
@@ -3357,8 +3338,6 @@ __skb_to_sgvec(struct sk_buff *skb, struct scatterlist *sg, int offset, int len,
 
 	skb_walk_frags(skb, frag_iter) {
 		int end, ret;
-
-		WARN_ON(start > offset + len);
 
 		end = start + frag_iter->len;
 		if ((copy = end - offset) > 0) {
@@ -4060,8 +4039,6 @@ bool skb_try_coalesce(struct sk_buff *to, struct sk_buff *from,
 
 		delta = from->truesize - SKB_TRUESIZE(skb_end_offset(from));
 	}
-
-	WARN_ON_ONCE(delta < len);
 
 	memcpy(skb_shinfo(to)->frags + skb_shinfo(to)->nr_frags,
 	       skb_shinfo(from)->frags,

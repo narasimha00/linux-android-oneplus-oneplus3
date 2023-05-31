@@ -697,8 +697,8 @@ int scm_call2(u32 fn_id, struct scm_desc *desc)
 	}  while (ret == SCM_V2_EBUSY && (retry_count++ < SCM_EBUSY_MAX_RETRY));
 
 	if (ret < 0)
-		pr_err("scm_call failed: func id %#llx, ret: %d, syscall returns: %#llx, %#llx, %#llx\n",
-			x0, ret, desc->ret[0], desc->ret[1], desc->ret[2]);
+		// pr_err("scm_call failed: func id %#llx, ret: %d, syscall returns: %#llx, %#llx, %#llx\n",
+		//	x0, ret, desc->ret[0], desc->ret[1], desc->ret[2]);
 
 	if (arglen > N_REGISTER_ARGS)
 		kfree(desc->extra_arg_buf);
@@ -742,9 +742,9 @@ int scm_call2_atomic(u32 fn_id, struct scm_desc *desc)
 					  desc->x5, &desc->ret[0],
 					  &desc->ret[1], &desc->ret[2]);
 	if (ret < 0)
-		pr_err("scm_call failed: func id %#llx, ret: %d, syscall returns: %#llx, %#llx, %#llx\n",
-			x0, ret, desc->ret[0],
-			desc->ret[1], desc->ret[2]);
+		// pr_err("scm_call failed: func id %#llx, ret: %d, syscall returns: %#llx, %#llx, %#llx\n",
+		//	x0, ret, desc->ret[0],
+		//	desc->ret[1], desc->ret[2]);
 
 	if (arglen > N_REGISTER_ARGS)
 		kfree(desc->extra_arg_buf);

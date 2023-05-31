@@ -35,8 +35,8 @@ struct IpaHwEventLogInfoData_t *uc_event_top_mmio)
 
 {
 	if ((uc_event_top_mmio->featureMask & (1 << IPA_HW_FEATURE_NTN)) == 0) {
-		IPAERR("NTN feature missing 0x%x\n",
-			uc_event_top_mmio->featureMask);
+		// IPAERR("NTN feature missing 0x%x\n",
+		//	uc_event_top_mmio->featureMask);
 		return;
 	}
 
