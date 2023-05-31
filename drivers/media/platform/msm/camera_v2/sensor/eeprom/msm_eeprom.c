@@ -166,8 +166,8 @@ static int read_eeprom_memory(struct msm_eeprom_ctrl_t *e_ctrl,
 			eb_info->i2c_slaveaddr = emap[j].saddr.addr;
 			e_ctrl->i2c_client.cci_client->sid =
 					eb_info->i2c_slaveaddr >> 1;
-			pr_err("qcom,slave-addr = 0x%X\n",
-				eb_info->i2c_slaveaddr);
+			// pr_err("qcom,slave-addr = 0x%X\n",
+			//	eb_info->i2c_slaveaddr);
 		}
 
 		if (emap[j].page.valid_size) {

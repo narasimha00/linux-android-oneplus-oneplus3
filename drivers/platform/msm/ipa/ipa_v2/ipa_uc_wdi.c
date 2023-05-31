@@ -314,10 +314,10 @@ struct IpaHwEventLogInfoData_t *uc_event_top_mmio)
 
 	if (uc_event_top_mmio->statsInfo.featureInfo[IPA_HW_FEATURE_WDI].
 		params.size != sizeof(struct IpaHwStatsWDIInfoData_t)) {
-			IPAERR("wdi stats sz invalid exp=%zu is=%u\n",
-				sizeof(struct IpaHwStatsWDIInfoData_t),
-				uc_event_top_mmio->statsInfo.
-				featureInfo[IPA_HW_FEATURE_WDI].params.size);
+			// IPAERR("wdi stats sz invalid exp=%zu is=%u\n",
+			//	sizeof(struct IpaHwStatsWDIInfoData_t),
+			//	uc_event_top_mmio->statsInfo.
+			//	featureInfo[IPA_HW_FEATURE_WDI].params.size);
 			return;
 	}
 

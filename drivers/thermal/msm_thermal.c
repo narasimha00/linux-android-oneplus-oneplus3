@@ -1025,7 +1025,7 @@ static void update_cpu_freq(int cpu)
 			cpufreq_quick_get_max(cpu),
 			cpus[cpu].limited_min_freq);
 		if (ret)
-			pr_err("Unable to update policy for cpu:%d. err:%d\n",
+			pr_warn("Unable to update policy for cpu:%d. err:%d\n",
 				cpu, ret);
 	}
 }
