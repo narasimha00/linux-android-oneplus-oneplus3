@@ -2961,11 +2961,11 @@ static int msm_compr_audio_effects_config_put(struct snd_kcontrol *kcontrol,
 	}
 	if (prtd->compr_passthr != LEGACY_PCM) {
 		// pr_debug("%s: No effects for compr_type[%d]\n",
-			__func__, prtd->compr_passthr);
+			// __func__, prtd->compr_passthr);
 		return 0;
 	} else {
 		// pr_debug("%s: Effects supported for compr_type[%d]\n",
-			 __func__, prtd->compr_passthr);
+			// __func__, prtd->compr_passthr);
 	}
 	effects_module = *values++;
 	switch (effects_module) {
