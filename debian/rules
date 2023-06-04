@@ -4,3 +4,22 @@ include /usr/share/linux-packaging-snippets/kernel-snippet.mk
 
 %:
 	dh $@
+
+path-override-prepare:
+	mkdir -p debian/path-override
+	ln -sf /opt/android/prebuilts/python/2.7.5/bin/python debian/path-override/python
+	git clone https://github.com/osm0sis/mkbootimg.git
+	sh -c "cd mkbootimg && make && make install"
+	rm -rf mkbootimg
+
+out/KERNEL_OBJ/boot.img: out/KERNEL_OBJ/initramfs.gz out/KERNEL_OBJ/target-dtb
+	$(shell mkbootimg \
+		--kernel $(KERNEL_OUT)/arch/$(KERNEL_ARCH)/boot/$(KERNEL_BUILD_TARGET) \
+		--ramdisk out/KERNEL_OBJ/initramfs.gz \
+		--cmdline 'androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7 ro root=/dev/dm-0 rootwait want_initramfs init=/init dm="system none ro,0 1 android-verity /dev/sde20" console=tty0 psi=1 droidian.lvm.prefer' \
+		--board '' --base 0x80000000 --pagesize 4096 \
+		--kernel_offset 0x00008000 --ramdisk_offset 0x01000000 \
+		--second_offset 0x00f00000 --tags_offset 0x00000100 \
+		--dtb_offset '' --os_version 0.0.0 --os_patch_level 2022-01 \
+		--header_version 0 --hashtype sha1 \
+		-o $@)

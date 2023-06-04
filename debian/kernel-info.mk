@@ -166,7 +166,7 @@ BUILD_CC = aarch64-linux-android-gcc-4.9
 
 # Extra paths to prepend to the PATH variable. You'll probably want
 # to specify the clang path here (the default).
-BUILD_PATH = /usr/lib/llvm-android-6.0-4691093/bin
+BUILD_PATH = /usr/lib/llvm-android-6.0-4691093
 
 # Extra packages to add to the Build-Depends section. Mainline builds
 # can have this section empty, unless cross-building.

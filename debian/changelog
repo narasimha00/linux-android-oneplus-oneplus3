@@ -1,4 +1,33 @@
-linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git20230304223628.744aa2a.halium.9.0+git20230318230835.5b3b2e3.halium.9.0) halium-9.0; urgency=medium
+linux-android-oneplus-oneplus3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git20230304223628.744aa2a.halium.9.0+git20230318230835.5b3b2e3.halium.9.0+git20230531015030.14918f2.halium.9.0) halium-9.0; urgency=medium
+
+  [ Bettehem ]
+  * Added waydroid support.
+  * Added android gadget config option so rndis works properly.
+  * Added patch for UT camera.
+  * ovl: fix open in stacked overlay
+  * ovl: filter of trusted xattr results in audit
+  * ovl: verify upper dentry before unlink and rename
+  * ovl: initialize error in ovl_copy_xattr
+  * ovl: Fix info leak in ovl_lookup_temp()
+  * ovl: copy_up_xattr(): use strnlen
+  * ovl: fix failure to fsync lower dir
+  * ovl: rename is_merge to is_lowest
+  * ovl: fix uid/gid when creating over whiteout
+  * UPSTREAM: ovl: fix missing negative dentry check in ovl_rename()
+  * Merge pull request #1 from Bettehem/Halium_9.0_GSI
+  * Imported dev mapper stuff from N935FXXS7CTE1 kernel source
+  * md: Reverted unnecessary exynos specific methods
+  * enable serial connection over pl2303
+  * Merge pull request #4 from Bettehem/Halium_9.0_GSI
+  * Merge pull request #5 from Bettehem/Halium_9.0_GSI
+  * disabled CONFIG_LOCALVERSION_AUTO
+  * Merge remote-tracking branch 'droidian/halium-9.0' into Halium_9.0_GSI
+  * Added .smcversion to remove the + which is added at the end of the kernel's localversion
+  * Fixed typo: .smcversion should be .scmversion
+  * Merge pull request #6 from Bettehem/Halium_9.0_GSI
+  * Enabled backports bt and disabled original bt in kernel defconfig
+  * Completed BT 4.2 backport.
+  * Merge pull request #7 from Bettehem/Halium_9.0_GSI
 
   [ Bardia Moshiri ]
   * yylloc multiple definition
@@ -6,15 +35,272 @@ linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git202303042
   * initial debian packaging
   * build with gcc 4.9 and set device as legacy
   * build for target Image.gz-dtb
+  * set correct flash string to check against
+  * md: drop all dmv_alsa specific parts
+  * md: use __GFP_WAIT instead of__GFP_DIRECT_RECLAIM
+  * md: dm-crypt: check bio structure against outdated flag
+  * add the missing dash to the localversion
+  * [packaging]: use oneplus3 as device name
+  * disable stack trace on skbuff functions
+  * tree-wide: drop/demote useless logging
+  * do 'nothing' on empty default switch cases
+  * msm-compress-q6-v2: completely commend out logging for effects
+  * add curly braces to make the else statement compile without any content
+
+  [ Katharine Chui ]
+  * 4.2 bluetooth stack backport
+  * bcm4359_bt: log and do not process repeated rfkill blocks/unlocks
+
+  [ Alistair Strachan ]
+  * x86_64_cuttlefish_defconfig: enable verity cert
+  * x86_64_cuttlefish_defconfig: Enable android-verity
+  * Revert "UPSTREAM: dm: do not allow readahead to limit IO size"
+  * Revert "UPSTREAM: dm: do not allow readahead to limit IO size"
+
+  [ Mikulas Patocka ]
+  * dm delay: fix a crash when invalid device is specified
+  * Revert "dm bufio: fix deadlock with loop device"
+  * dm table: fix invalid memory accesses with too high sector number
+  * dm snapshot: use mutex instead of rw_semaphore
+  * dm snapshot: introduce account_start_copy() and account_end_copy()
+  * dm snapshot: rework COW throttling to fix deadlock
+  * block: fix an integer overflow in logical block size
+  * dm cache: fix a crash due to incorrect work item cancelling
+  * dm raid: select the Kconfig option CONFIG_MD_RAID0
+  * dm ioctl: fix out of bounds array access when no devices
+  * dm snapshot: fix crash with transient storage and zero chunk size
+  * dm snapshot: properly fix a crash when an origin has no snapshots
+
+  [ Zhao Heming ]
+  * md/bitmap: md_bitmap_get_counter returns wrong blocks
+  * md: md_open returns -EBUSY when entering racing area
+
+  [ Christoph Hellwig ]
+  * PCI: Prevent sysfs disable of device while driver is attached
+  * aio: hold an extra file reference over AIO read/write operations
+  * md: factor out a mddev_find_locked helper from mddev_find
+
+  [ Joe Thornber ]
+  * dm thin metadata: try to avoid ever aborting transactions
+  * dm space map common: fix to ensure new block isn't already in use
+  * dm cache: fix corruption seen when using cache > 2TB
+  * dm persistent data: packed struct should have an aligned() attribute too
+  * dm space map common: fix division bug in sm_ll_find_free_block()
+
+  [ Nikos Tsironis ]
+  * dm kcopyd: Fix bug causing workqueue stalls
+  * dm snapshot: Fix excessive memory usage and workqueue stalls
+  * dm era: Recover committed writeset after crash
+  * dm era: Verify the data block size hasn't changed
+  * dm era: Fix bitset memory leaks
+  * dm era: Use correct value size in equality function of writeset tree
+  * dm era: Reinitialize bitset cache before digesting a new writeset
+  * dm era: only resize metadata in preresume
+  * dm era: Update in-core bitset after committing the metadata
+  * dm thin: fix bug where bio that overwrites thin block ignores FUA
+
+  [ Shaohua Li ]
+  * md: MD_RECOVERY_NEEDED is set for mddev->recovery
+  * MD: fix invalid stored role for a disk
+
+  [ Jeffle Xu ]
+  * dm table: fix iterate_devices based device capability checks
+
+  [ Mike Snitzer ]
+  * dm cache metadata: save in-core policy_hint_size to on-disk superblock
+  * dm thin metadata: fix __udivdi3 undefined on 32-bit
+  * dm thin: restore requested 'error_if_no_space' setting on OODS to WRITE transition
+  * dm mpath: check if path's request_queue is dying in activate_path()
+  * dm cache: fix resize crash if user doesn't reload cache table
+
+  [ Arnd Bergmann ]
+  * ARM: fix put_user() for gcc-8
+  * turn off -Wattribute-alias
+  * bcache: avoid clang -Wunintialized warning
+  * md: avoid warning for 32-bit sector_t
+  * md: raid5: avoid string overflow warning
+
+  [ Matthias Kaehlcke ]
+  * dm ioctl: remove double parentheses
+
+  [ Qinglang Miao ]
+  * dm ioctl: fix error return code in target_message
+
+  [ Thomas Gleixner ]
+  * hrtimer: Avoid locking in hrtimer_cancel() if timer not active
+  * dm table: Remove BUG_ON(in_interrupt())
+
+  [ NeilBrown ]
+  * md/raid6: Fix anomily when recovering a single device in RAID6.
+
+  [ Michael Lyle ]
+  * bcache: don't attach backing with duplicate UUID
+
+  [ Huacai Chen ]
+  * bcache: Fix building error on MIPS
+
+  [ Tang Junhui ]
+  * bcache: fix for data collapse after re-attaching an attached device
+  * bcache: return attach error when no cache set exist
+  * bcache: fix kcrashes with fio in RAID5 backend dev
+  * bcache: fix miss key refill->end in writeback
+  * bcache: fix failure in journal relplay
+  * bcache: do not subtract sectors_to_gc for bypassed IO
+
+  [ Sami Tolvanen ]
+  * Revert "ANDROID: dm verity: add minimum prefetch size"
+  * UPSTREAM: dm verity fec: fix bufio leaks
+
+  [ Sunwook Eom ]
+  * UPSTREAM: dm verity fec: fix hash block number in verity_fec_decode
+
+  [ Dennis Yang ]
+  * md: update slab_cache before releasing new stripes when stripes resizing
+
+  [ Guoju Fang ]
+  * bcache: fix a lost wake-up problem caused by mca_cannibalize_lock
+
+  [ Ye Bin ]
+  * dm cache metadata: Avoid returning cmd->bm wild pointer on error
+  * dm thin metadata: Avoid returning cmd->bm wild pointer on error
+
+  [ Coly Li ]
+  * bcache: only permit to recovery read error when cache device is clean
+  * bcache: properly set task state in bch_writeback_thread()
+  * bcache: quit dc->writeback_thread when BCACHE_DEV_DETACHING is set
+  * bcache: fix input overflow to cache set sysfs file io_error_halflife
+  * bcache: fix input overflow to sequential_cutoff
+  * bcache: improve sysfs_strtoul_clamp()
+  * bcache: never set KEY_PTRS of journal key to 0 in journal_reclaim()
+  * bcache: fix stack corruption by PRECEDING_KEY()
+  * bcache: return error immediately in bch_journal_replay()
+  * bcache: add failure check to run_cache_set() for journal replay
+  * bcache: check c->gc_thread by IS_ERR_OR_NULL in cache_set_flush()
+  * bcache: at least try to shrink 1 node in bch_mca_scan()
+  * bcache: explicity type cast in bset_bkey_last()
+  * bcache: fix super block seq numbers comparision in register_cache_set()
+  * bcache: allocate meta data pages as compound pages
+
+  [ Kent Overstreet ]
+  * dm: Use kzalloc for all structs with embedded biosets/mempools
+  * bcache: Make gc wakeup sane, remove set_task_state()
+
+  [ Wei Yongjun ]
+  * dm flakey: return -EINVAL on interval bounds error in flakey_ctr()
+
+  [ Zhiqiang Liu ]
+  * md: raid1: check rdev before reference in raid1_sync_request func
+  * bcache: fix potential deadlock problem in btree_gc_coalesce
+
+  [ Bart Van Assche ]
+  * dm: mark request_queue dead before destroying the DM device
+
+  [ Guoqing Jiang ]
+  * md: don't call spare_active in md_reap_sync_thread if all member devices can't work
+  * md: don't set In_sync if array is frozen
+  * md: don't flush workqueue unconditionally in md_open
+
+  [ Tahsin Erdogan ]
+  * block: Make CFQ default to IOPS mode on SSDs
+  * dm: fix second blk_delay_queue() parameter to be in msec units not jiffies
+
+  [ Goldwyn Rodrigues ]
+  * dm flakey: check for null arg_name in parse_features()
+
+  [ Dan Williams ]
+  * md/raid: only permit hot-add of compatible integrity profiles
+
+  [ Andy Shevchenko ]
+  * md: Avoid namespace collision with bitmap API
+
+  [ Shenghui Wang ]
+  * bcache: recal cached_dev_sectors on detach
+
+  [ Hou Tao ]
+  * dm btree: increase rebalance threshold in __rebalance2()
+
+  [ Xiao Ni ]
+  * RAID10 BUG_ON in raise_barrier when force is true and conf->barrier is 0
+  * It's wrong to add len to sector_nr in raid10 reshape twice
+  * md/raid6: Set R5_ReadError when there is read failure on parity disk
+
+  [ Dan Carpenter ]
+  * scsi: megaraid: silence a static checker bug
+  * dmaengine: k3dma: Off by one in k3_of_dma_simple_xlate()
+  * qlogic: check kstrtoul() for errors
+  * bcache: silence static checker warning
+
+  [ Milan Broz ]
+  * dm verity: use message limit for data block corruption message
+
+  [ Mariusz Tkaczyk ]
+  * md: fix for divide error in status_resync
+
+  [ ZhangXiaoxu ]
+  * dm btree: fix order of block initialization in btree_split_beneath
+  * dm space map metadata: fix missing store of apply_bops() return value
+
+  [ Junxiao Bi ]
+  * dm bufio: fix deadlock with loop device
+
+  [ Nigel Croxon ]
+  * Don't jump to compute_result state from check_result state
+  * md/raid: raid5 preserve the writeback action after the parity check
+
+  [ Song Liu ]
+  * Revert "Don't jump to compute_result state from check_result state"
+
+  [ Liang Chen ]
+  * bcache: fix a race between cache register and cacheset unregister
+
+  [ Jason Cai (Xiang Feng) ]
+  * dm thin: add sanity checks to thin-pool and external snapshot creation
+
+  [ Aditya Pakki ]
+  * md: Fix failed allocation of md_register_thread
+
+  [ Jaegeuk Kim ]
+  * Merge commit 'f264f5e373eb' into android-3.18
+  * Merge remote-tracking branch 'origin/upstream-f2fs-stable-linux-3.18.y' into android-3.18
+  * UPSTREAM: dm: do not allow readahead to limit IO size
+  * UPSTREAM: dm: do not allow readahead to limit IO size
+
+  [ Corey Wright ]
+  * dm: remove duplicate dm_get_live_table() in __dm_destroy()
+
+  [ Wenwen Wang ]
+  * scsi: 3w-9xxx: fix a missing-check bug
+  * scsi: 3w-xxxx: fix a missing-check bug
+  * dm ioctl: harden copy_params()'s copy_from_user() from malicious users
+
+  [ Junichi Nomura ]
+  * dm: fix AB-BA deadlock in __dm_destroy()
+
+  [ BingJing Chang ]
+  * md/raid10: fix that replacement cannot complete recovery after reassemble
+  * md/raid5: fix data corruption of replacements after originals dropped
+
+  [ John Pittman ]
+  * dm kcopyd: avoid softlockup in run_complete_job
+
+  [ Shan Hai ]
+  * bcache: release dc->writeback_lock properly in bch_writeback_thread()
+
+  [ tang.junhui ]
+  * bcache: fix wrong cache_misses statistics
+
+  [ Rui Hua ]
+  * bcache: recover data from backing when data is clean
+
+  [ Tony Asleson ]
+  * bcache: Correct return value for sysfs attach errors
+
+  [ Arthur Brugière ]
+  * feat: Add wireguard support (#2)
 
   [ Ernes_t ]
   * Merge pull request #1 from Bettehem/Halium_9.0_GSI
   * Merge pull request #2 from Bettehem/Halium_9.0_GSI
-
-  [ Bettehem ]
-  * Added waydroid support.
-  * Added android gadget config option so rndis works properly.
-  * Added patch for UT camera.
 
   [ Ernest ]
   * Update apparmor.
@@ -114,9 +400,6 @@ linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git202303042
 
   [ Jens Axboe ]
   * cfq-iosched: fix the setting of IOPS mode on SSDs
-
-  [ Tahsin Erdogan ]
-  * block: Make CFQ default to IOPS mode on SSDs
 
   [ Daniel Micay ]
   * add toggle for disabling newly added USB devices
@@ -537,9 +820,6 @@ linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git202303042
 
   [ Marvin Tsai ]
   * op3: refer to correct GPU firmware signature for msm8996sg
-
-  [ Thomas Gleixner ]
-  * hrtimer: Avoid locking in hrtimer_cancel() if timer not active
 
   [ Balbir Singh ]
   * UPSTREAM: sched/core: Fix a race between try_to_wake_up() and a woken up task
@@ -1682,10 +1962,6 @@ linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git202303042
   * soc: qcom: bgcom: disable/enable interrupt on device suspend/resume
   * soc: qcom: bgcom: adds info log for memory allocation faliure
 
-  [ Christoph Hellwig ]
-  * PCI: Prevent sysfs disable of device while driver is attached
-  * aio: hold an extra file reference over AIO read/write operations
-
   [ raghavendra ambadas ]
   * fbdev: msm: Fix unintialisation of variables
   * msm: mdss: try recovering from PP timeout without panic
@@ -1807,11 +2083,6 @@ linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git202303042
   [ David Lechner ]
   * net: usb: rtl8150: demote allmulti message to dev_dbg()
 
-  [ Dan Carpenter ]
-  * scsi: megaraid: silence a static checker bug
-  * dmaengine: k3dma: Off by one in k3_of_dma_simple_xlate()
-  * qlogic: check kstrtoul() for errors
-
   [ Alexander Duyck ]
   * ixgbe: Be more careful when modifying MAC filters
 
@@ -1847,9 +2118,6 @@ linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git202303042
 
   [ Marek Szyprowski ]
   * drm/exynos: gsc: Fix support for NV16/61, YUV420/YVU420 and YUV422 modes
-
-  [ BingJing Chang ]
-  * md/raid10: fix that replacement cannot complete recovery after reassemble
 
   [ Keerthy ]
   * ARM: dts: da850: Fix interrups property for gpio
@@ -2081,10 +2349,6 @@ linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git202303042
   [ Jakub Kicinski ]
   * bpf: fix references to free_bpf_prog_info() in comments
 
-  [ Wenwen Wang ]
-  * scsi: 3w-9xxx: fix a missing-check bug
-  * scsi: 3w-xxxx: fix a missing-check bug
-
   [ Thomas Richter ]
   * s390/cpum_sf: Add data entry sizes to sampling trailer entry
   * perf: fix invalid bit in diagnostic entry
@@ -2196,14 +2460,6 @@ linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git202303042
   [ Avaneesh Kumar Dwivedi ]
   * soc: qcom: Query and log Blackghost firmware version
 
-  [ Jaegeuk Kim ]
-  * Merge commit 'f264f5e373eb' into android-3.18
-  * Merge remote-tracking branch 'origin/upstream-f2fs-stable-linux-3.18.y' into android-3.18
-
-  [ Arnd Bergmann ]
-  * ARM: fix put_user() for gcc-8
-  * turn off -Wattribute-alias
-
   [ Anssi Hannula ]
   * can: xilinx_can: fix RX loop if RXNEMP is asserted without RXOK
   * can: xilinx_can: fix device dropping off bus on RX overrun
@@ -2259,10 +2515,6 @@ linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git202303042
   [ Fei Mao ]
   * input: touchscreen: synaptics_dsx_2.6: reset device when resume
 
-  [ Alistair Strachan ]
-  * x86_64_cuttlefish_defconfig: enable verity cert
-  * x86_64_cuttlefish_defconfig: Enable android-verity
-
   [ Manjunatha Madana ]
   * ARM: dts: Mount system and vendor for msm8909w from fstabs.
 
@@ -2272,5 +2524,5 @@ linux-android-oneplus-3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git202303042
   [ Baochu Xu ]
   * ARM: dts: move android fstab node to SDW2500 dts
 
- -- Bardia Moshiri <fakeshell@bardia.tech>  Sat, 18 Mar 2023 19:08:35 -0400
+ -- Bettehem <chris.mustola@gmail.com>  Wed, 31 May 2023 04:50:30 +0300
 
