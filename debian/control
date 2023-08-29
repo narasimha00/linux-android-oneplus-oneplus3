@@ -6,6 +6,7 @@ Uploaders: Eugenio Paolantonio (g7) <eugenio@droidian.org>,
            r3vn <giuseppe@droidian.org>,
            Erfan Abdi <erfan@droidian.org>,
            Erik Inkinen <erik@droidian.org>,
+           Bardia Moshiri <fakeshell@bardia.tech>,
 XS-Droidian-Host-Arch: arm64
 XS-Droidian-Build-On: amd64
 Build-Depends: build-essential,
@@ -26,7 +27,7 @@ Build-Depends: build-essential,
                mkbootimg (>= 10.0.0),
                mkdtboimg,
                avbtool,
-               linux-initramfs-halium-generic:arm64, binutils-aarch64-linux-gnu, clang-android-6.0-4691093, gcc-4.9-aarch64-linux-android, g++-4.9-aarch64-linux-android, libgcc-4.9-dev-aarch64-linux-android-cross
+               linux-initramfs-halium-generic:arm64, binutils-aarch64-linux-gnu, clang-android-6.0-4691093, gcc-4.9-aarch64-linux-android, g++-4.9-aarch64-linux-android, libgcc-4.9-dev-aarch64-linux-android-cross, gcc-12
 Standards-Version: 4.5.0.3
 Vcs-Browser: https://github.com/droidian/linux-android-oneplus-oneplus3
 Vcs-Git: https://github.com/droidian/linux-android-oneplus-oneplus3.git

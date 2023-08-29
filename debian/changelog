@@ -1,4 +1,20 @@
-linux-android-oneplus-oneplus3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git20230304223628.744aa2a.halium.9.0+git20230318230835.5b3b2e3.halium.9.0+git20230531015030.14918f2.halium.9.0) halium-9.0; urgency=medium
+linux-android-oneplus-oneplus3 (3.18.120+droidian2+git20230826022129.f867657.droidian) trixie; urgency=medium
+
+  [ Bardia Moshiri ]
+  * Revert ubports binder configurable caller patch
+
+  [ Eugenio Paolantonio (g7) ]
+  * [skip ci] Move to Droidian rolling
+
+ -- Bardia Moshiri <fakeshell@bardia.tech>  Fri, 25 Aug 2023 22:21:29 -0400
+
+linux-android-oneplus-oneplus3 (3.18.120+droidian1) bookworm; urgency=medium
+
+  * add circleci configuration
+
+ -- Bardia Moshiri <fakeshell@bardia.tech>  Tue, 06 Jun 2023 00:53:25 -0400
+
+linux-android-oneplus-oneplus3 (3.18.120+droidian0) bookworm; urgency=medium
 
   [ Bettehem ]
   * Added waydroid support.
@@ -28,6 +44,7 @@ linux-android-oneplus-oneplus3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git20
   * Enabled backports bt and disabled original bt in kernel defconfig
   * Completed BT 4.2 backport.
   * Merge pull request #7 from Bettehem/Halium_9.0_GSI
+  * Fixed building the boot.img with droidian's build system.
 
   [ Bardia Moshiri ]
   * yylloc multiple definition
@@ -2524,5 +2541,5 @@ linux-android-oneplus-oneplus3 (0.0.0+git20230304123142.edc2fec.halium.9.0+git20
   [ Baochu Xu ]
   * ARM: dts: move android fstab node to SDW2500 dts
 
- -- Bettehem <chris.mustola@gmail.com>  Wed, 31 May 2023 04:50:30 +0300
+ -- Bettehem <chris.mustola@gmail.com>  Sun, 04 Jun 2023 05:26:28 +0300
 

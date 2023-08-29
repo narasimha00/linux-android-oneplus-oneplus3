@@ -9,7 +9,7 @@ path-override-prepare:
 	mkdir -p debian/path-override
 	ln -sf /opt/android/prebuilts/python/2.7.5/bin/python debian/path-override/python
 	git clone https://github.com/osm0sis/mkbootimg.git
-	sh -c "cd mkbootimg && make && make install"
+	sh -c "cd mkbootimg && make CC=gcc-12 && make install"
 	rm -rf mkbootimg
 
 out/KERNEL_OBJ/boot.img: out/KERNEL_OBJ/initramfs.gz out/KERNEL_OBJ/target-dtb
