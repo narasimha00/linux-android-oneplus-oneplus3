@@ -8,8 +8,9 @@ include /usr/share/linux-packaging-snippets/kernel-snippet.mk
 path-override-prepare:
 	mkdir -p debian/path-override
 	ln -sf /opt/android/prebuilts/python/2.7.5/bin/python debian/path-override/python
+	rm -rf mkbootimg
 	git clone https://github.com/osm0sis/mkbootimg.git
-	sh -c "cd mkbootimg && make CC=gcc-12 && make install"
+	sh -c "cd mkbootimg && make CFLAGS="-Wno-error=stringop-overflow" && make install"
 	rm -rf mkbootimg
 
 out/KERNEL_OBJ/boot.img: out/KERNEL_OBJ/initramfs.gz out/KERNEL_OBJ/target-dtb
