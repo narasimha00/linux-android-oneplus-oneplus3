@@ -24,7 +24,7 @@ DEVICE_MODEL = oneplus3
 #DEVICE_PLATFORM = platform
 
 # Marketing-friendly full-name. This will be used inside package descriptions
-DEVICE_FULL_NAME = OnePlus 3
+DEVICE_FULL_NAME = OnePlus 3/3T
 
 # Whether to use configuration fragments to augment the kernel configuration.
 # If unsure, keep this to 0.
@@ -148,7 +148,7 @@ FLASH_INFO_MODEL =
 FLASH_INFO_CPU = Qualcomm Technologies, Inc MSM8996
 
 # Space-separated list of supported device ids as reported by fastboot
-FLASH_INFO_DEVICE_IDS = oneplus3 oneplus3t
+FLASH_INFO_DEVICE_IDS = msm8996
 
 ########################################################################
 # Kernel build settings
