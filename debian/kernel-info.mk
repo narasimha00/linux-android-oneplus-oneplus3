@@ -127,6 +127,10 @@ FLASH_IS_AONLY = 1
 # Do not enable if you don't know what you're doing
 FLASH_IS_LEGACY_DEVICE = 1
 
+# On some devices flashing userdata.img via fastboot fails and telnet should
+# be used instead. Set to 1 for telnet and 0 for fastboot
+FLASH_USE_TELNET = 1
+
 # Device manufacturer. This must match the `ro.product.vendor.manufacturer`
 # Android property. If you don't want to specify this, leave it undefined,
 # FLASH_INFO_CPU will be checked instead.
