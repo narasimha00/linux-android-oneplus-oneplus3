@@ -673,7 +673,7 @@ static int synaptics_rmi4_i2c_write_word(struct i2c_client* client,
 	return retval;
 }
 
-static char log_count = 0;
+//static char log_count = 0;
 static bool is_report_key = true;
 #define REP_KEY_BACK (key_reverse?(KEY_APPSELECT):(KEY_BACK))
 #define REP_KEY_MENU (key_reverse?(KEY_BACK):(KEY_APPSELECT))
@@ -696,8 +696,8 @@ static void int_key(struct synaptics_ts_data *ts )
     }
 
     button_key = synaptics_rmi4_i2c_read_byte(ts->client,0x00);
-    if (6 == (++log_count % 12))
-        TPD_ERR("touch_key[0x%x],touchkey_state[0x%x]\n",button_key,ts->pre_btn_state);
+    //if (6 == (++log_count % 12))
+    //    TPD_ERR("touch_key[0x%x],touchkey_state[0x%x]\n",button_key,ts->pre_btn_state);
     if (!is_report_key)
         return;
     if((button_key & 0x01) && !(ts->pre_btn_state & 0x01) && !key_disable)//back
